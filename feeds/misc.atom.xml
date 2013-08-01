@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-07-15T13:43:00-03:00</updated><entry><title>XKC(T)D plot fun</title><link href="http://ocefpaf.github.io/blog/2013/07/15/XKCTD/" rel="alternate"></link><updated>2013-07-15T13:43:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-07-15:blog/2013/07/15/XKCTD/</id><summary type="html">&lt;p&gt;&lt;a href="http://jakevdp.github.io/"&gt;Jakecob Vanderplas&lt;/a&gt; &lt;a href="https://github.com/matplotlib/matplotlib/pull/1329"&gt;Sketch Path Filter&lt;/a&gt;
-got into the core of (matplotlib 1.3)[http://matplotlib.org/examples/showcase/xkcd.html?highlight=xkcd].
+got into the core of &lt;a href="http://matplotlib.org/examples/showcase/xkcd.html?highlight=xkcd"&gt;matplotlib 1.3&lt;/a&gt;.
 Now it is easy to produce plots with the XKCD style with just the following:&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
