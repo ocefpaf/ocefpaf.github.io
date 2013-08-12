@@ -1282,7 +1282,9 @@ two-pass criteria from a previous post.</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">kw_original</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#ff3333&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.65</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Practical Salinity Before Wild Edit.&quot;</span><span class="p">)</span>
 <span class="n">kw_despiked</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#339933&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Practical Salinity After Wild Edit.&quot;</span><span class="p">)</span>
@@ -1303,6 +1305,7 @@ two-pass criteria from a previous post.</p>
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZYAAAH4CAYAAABpBsu8AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl8FPXh//HX7uYOISE3EBBiAEmQQ0BELgVtvaqohXq0
@@ -1718,17 +1721,21 @@ Zdy4cTg5OTFr1qxqt09LS2PJkiU8ffqUZs2aMXnyZJ071IzVlxDVJVNhQgghDEruChNCCGFQMrAI
 IYQwKBlYhBBCGJQMLEIIIQxKBhYhhBAGJQOLEEIIg5KBRQghhEHJwCKEEMKgZGARQghhUP8PJE3J
 tcLyC+sAAAAASUVORK5CYII=
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p>
 <p>The parameters used where:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Wild Edit.</span>
 <span class="n">cast</span><span class="p">[</span><span class="s">&#39;SP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cast</span><span class="p">[</span><span class="s">&#39;SP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">despike</span><span class="p">(</span><span class="n">n1</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">block</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
@@ -1736,6 +1743,7 @@ tcLyC+sAAAAASUVORK5CYII=
 
 </div>
 </div>
+
 </div></p>
 <p>The first pass just flag the data that is more than 2 standard deviations from
 the mean and hide them from the second pass.  The second pass then flags the
@@ -1769,6 +1777,9 @@ data.</p></div>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
             <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2013/08/12/creating-a-correct-map-of-brazilian-states-with-basemap-date-2013-08-12-1245-comments-true-slug-brazil-states-map/">Creating a correct map of Brazilian states with basemap date: 2013-08-12 12:45 comments: true slug: brazil-states-map</a>
+      </li>
+            <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/08/05/custom-binaries/">Reading custom binaries</a>
       </li>
             <li class="post">
@@ -1780,9 +1791,6 @@ data.</p></div>
             <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/07/15/XKCTD/">XKC(T)D plot fun</a>
       </li>
-            <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2013/07/08/CTD2DataFrame_2/">CTD2DataFrame take 2</a>
-      </li>
           </ul>
   </section>
     <section>
@@ -1793,6 +1801,7 @@ data.</p></div>
               <li><a href="http://ocefpaf.github.io/category/misc.html">Misc</a></li>
               <li><a href="http://ocefpaf.github.io/category/plotting.html">Plotting</a></li>
               <li><a href="http://ocefpaf.github.io/category/teaching.html">Teaching</a></li>
+              <li><a href="http://ocefpaf.github.io/category/misc.html">misc</a></li>
           </ul>
   </section>
    

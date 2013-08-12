@@ -1268,7 +1268,9 @@ at a velocity time-series with some bad data.</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">kw</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">histtype</span><span class="o">=</span><span class="s">&#39;stepfilled&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax0</span><span class="p">,</span> <span class="n">ax1</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -1287,6 +1289,7 @@ at a velocity time-series with some bad data.</p>
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXsAAAEFCAYAAAACFke6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAHZpJREFUeJzt3X9QXOW9P/D3JoumkBi0N1l0F4cku8ISDcGAOL113FYt
@@ -1424,11 +1427,13 @@ j/EVh8MhrrnmGrFq1Sqxc+fOmI8nhBBvvvmm0Gg0oqCgIHwO3d3d4ujRo+KWW26J++2KLpcrfMdC
 IsZ47733RFFRUcTtgok6l8kke14Lwbk9Fc7tSBoh+J1uIqL5jn+piohIAgx7IiIJMOyJiCTAsCci
 kgDDnohIAgx7IiIJ/D81FKVMfg7sCgAAAABJRU5ErkJggg==
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p>
 <p>Can you see the bins that separate themselves from the rest?  Those are
 probably spikes.  It is common practice to use a criteria of labeling the data
@@ -1442,7 +1447,9 @@ evaluate small chunks of the data separately.  Here is an example:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">def</span> <span class="nf">rolling_window</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">block</span><span class="p">):</span>
     <span class="n">shape</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">block</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">block</span><span class="p">)</span>
@@ -1481,6 +1488,7 @@ evaluate small chunks of the data separately.  Here is an example:</p>
 
 </div>
 </div>
+
 </div></p>
 <p>The first compute the statistics of the data ($\mu$ and $\sigma$) and marks
 (but do not exclude yet) data that deviates more than $n1 \times \sigma$ from
@@ -1491,7 +1499,9 @@ to avoid loops while computing $\mu$ and $\sigma$ for each <strong>block</strong
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">kw</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">n1</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">block</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="s">&#39;ud&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">despike</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;u&#39;</span><span class="p">],</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
@@ -1529,6 +1539,7 @@ to avoid loops while computing $\mu$ and $\sigma$ for each <strong>block</strong
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeMAAAD9CAYAAACP3B9nAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVPX6B/APq4qgggokY2IiIovANcE2wRTSbhK5YFpG
@@ -1840,11 +1851,13 @@ uzu5u7vTvHnzJIvvzJkz5O/vT76+vuTj40Mff/wxERHdvHmThg0bRn379qWQkBCjGVvBjEOTc1Mz
 xhhjzPDuqWZqxhhjzBhxMmaMMcYkxsmYMcYYkxgnY8YYY0xinIwZY4wxiXEyZowxxiT2//WTPPou
 4GNMAAAAAElFTkSuQmCC
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p>
 <p>The "two-pass" method did well for <em>u</em> while the $3\times \sigma$ criteria
 failed not only to identify all the spikes, but also removed good data from the
@@ -1884,6 +1897,9 @@ and to get a "feel" for the data."  -- directly from Emery and Thomson book.</p>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
             <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2013/08/12/creating-a-correct-map-of-brazilian-states-with-basemap-date-2013-08-12-1245-comments-true-slug-brazil-states-map/">Creating a correct map of Brazilian states with basemap date: 2013-08-12 12:45 comments: true slug: brazil-states-map</a>
+      </li>
+            <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/08/05/custom-binaries/">Reading custom binaries</a>
       </li>
             <li class="post">
@@ -1895,9 +1911,6 @@ and to get a "feel" for the data."  -- directly from Emery and Thomson book.</p>
             <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/07/15/XKCTD/">XKC(T)D plot fun</a>
       </li>
-            <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2013/07/08/CTD2DataFrame_2/">CTD2DataFrame take 2</a>
-      </li>
           </ul>
   </section>
     <section>
@@ -1908,6 +1921,7 @@ and to get a "feel" for the data."  -- directly from Emery and Thomson book.</p>
               <li><a href="http://ocefpaf.github.io/category/misc.html">Misc</a></li>
               <li><a href="http://ocefpaf.github.io/category/plotting.html">Plotting</a></li>
               <li><a href="http://ocefpaf.github.io/category/teaching.html">Teaching</a></li>
+              <li><a href="http://ocefpaf.github.io/category/misc.html">misc</a></li>
           </ul>
   </section>
    

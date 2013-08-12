@@ -1272,13 +1272,16 @@ DataFrame.  Here is an example how to use it:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">cast</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="o">.</span><span class="n">from_cnv</span><span class="p">(</span><span class="s">&#39;./data/CTD_001.cnv.gz&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s">&#39;gzip&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+
 </div></p>
 <p>That's it! One line to load the compressed <a href="http://www.seabird.com/software/SBEDataProcforWindows.htm">SeaBird</a> cnv file into
 memory.  If you have the Rossete file you can load it as well and print the
@@ -1286,7 +1289,9 @@ bottle summary with just two lines:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Rossum.</span>
 <span class="n">rossum</span> <span class="o">=</span> <span class="n">rosette_summary</span><span class="p">(</span><span class="s">&#39;./data/CTD_001.ros&#39;</span><span class="p">)</span>
@@ -1301,8 +1306,9 @@ bottle summary with just two lines:</p>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[3]:</div>
+    Out[3]:</div>
 <div class="box-flex1 output_subarea output_pyout">
+
 <div class="output_html rendered_html">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
@@ -1495,17 +1501,21 @@ Out[3]:</div>
 </table>
 </div>
 </div>
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p>
 <p>Metadata and data flags are also easily accessed.</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Read metadata.</span>
 <span class="n">hours</span> <span class="o">=</span> <span class="n">cast</span><span class="p">[</span><span class="s">&#39;timeS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">/</span> <span class="mf">60.</span> <span class="o">/</span> <span class="mf">60.</span>
@@ -1528,14 +1538,17 @@ Out[3]:</div>
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>Cast duration was: 3.91 hours.
+<pre>
+Cast duration was: 3.91 hours.
+
 </pre>
 </div>
 </div>
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[4]:</div>
+    Out[4]:</div>
 <div class="box-flex1 output_subarea output_pyout">
+
 <div class="output_html rendered_html">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
 <table border="1" class="dataframe">
@@ -1609,17 +1622,21 @@ Out[4]:</div>
 </table>
 </div>
 </div>
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p>
 <p>Cleaning the DataFrame and manipulating the variables:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">keep</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">&#39;t090C&#39;</span><span class="p">,</span> <span class="s">&#39;c0S/m&#39;</span><span class="p">,</span> <span class="s">&#39;sbeox0Mm/Kg&#39;</span><span class="p">,</span> <span class="s">&#39;dz/dtM&#39;</span><span class="p">])</span>
 <span class="n">cast</span> <span class="o">=</span> <span class="n">cast</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">keep</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="n">cast</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c"># Remove unwanted columns.</span>
@@ -1631,13 +1648,16 @@ Out[4]:</div>
 
 </div>
 </div>
+
 </div></p>
 <p>The module also contains some rudimentary CTD processing steps akin to those
 found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataProcessing/">SBE Software</a>:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Split.</span>
 <span class="n">downcast</span><span class="p">,</span> <span class="n">upcast</span> <span class="o">=</span> <span class="n">cast</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
@@ -1645,10 +1665,13 @@ found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataPro
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Loop Edit.</span>
 <span class="n">downcast</span> <span class="o">=</span> <span class="n">downcast</span><span class="o">.</span><span class="n">press_check</span><span class="p">()</span>  <span class="c"># Remove pressure reversals.</span>
@@ -1657,10 +1680,13 @@ found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataPro
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Wild Edit.</span>
 <span class="n">kw</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">n1</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">block</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
@@ -1669,10 +1695,13 @@ found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataPro
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Bin-average.</span>
 <span class="n">downcast</span> <span class="o">=</span> <span class="n">downcast</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">Series</span><span class="o">.</span><span class="n">bindata</span><span class="p">,</span> <span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="n">delta</span><span class="o">=</span><span class="mf">1.</span><span class="p">))</span>
@@ -1681,10 +1710,13 @@ found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataPro
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Smooth.</span>
 <span class="n">pmax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">cast</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
@@ -1700,12 +1732,15 @@ found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataPro
 
 </div>
 </div>
+
 </div></p>
 <p>The module also allows for a more "customized" derive step:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Derive.</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">downcast</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
@@ -1724,12 +1759,15 @@ found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataPro
 
 </div>
 </div>
+
 </div></p>
 <p>Last but not least, a handy way for plotting the data:</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">kw_t</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#6699cc&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Temperature [$^\circ$C]&quot;</span><span class="p">)</span>
 <span class="n">kw_ct</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#ffcc33&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Conservative temperature [$^\circ$C]&quot;</span><span class="p">)</span>
@@ -1751,6 +1789,7 @@ found in the <a href="ftp://ftp.halcyon.com/pub/seabird/OUT/SeasoftV2/SBEDataPro
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZIAAAHxCAYAAABH4joOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XtwnOWB5/vv+/ZFl1br0rJlWb6AjczFMrZlbBLHGcNC
@@ -2181,15 +2220,19 @@ bI+Pj2fDhg28//77PProo4wfP56kpCTWrl2LyWRi4sSJtzSX1U2jqZiEsJWM/itEG/j000/Zt28f
 r776qr1DEaLdSdOWEEKIVpGKRIg24mhzfAtxkzRtCSGEaBW5IxFCCNEqUpEIIYRoFalIhBBCtIpU
 JEIIIVpFKhIhhBCt8v8BDvRyUjRq4vsAAAAASUVORK5CYII=
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">kw_sp</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#339933&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Practical Salinity&quot;</span><span class="p">)</span>
 <span class="n">kw_sa</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#999999&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Absolute Salinity [g kg$^{-1}$]&quot;</span><span class="p">)</span>
@@ -2211,6 +2254,7 @@ JEIIIVpFKhIhhBCt8v8BDvRyUjRq4vsAAAAASUVORK5CYII=
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZYAAAHyCAYAAADInejaAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XtcXPWdN/DPmTuXgYFhgBBCgJALEHOTqDEx5lFrW822
@@ -2696,15 +2740,19 @@ jBs3jsWLF1NVVcX//d//4efnh4eHB927dyc3N5c+ffrc9ecUwlRk2XwhLNiaNWtwc3Pjsccea+1Q
 hFDJUJgQFury5cukpKQQFRXV2qEIoUeGwoSwQJ9//jlffvklY8eOpWPHjq0djhB6ZChMCCGESclQ
 mBBCCJOSxCKEEMKkJLEIIYQwKUksQgghTEoSixBCCJP6f2EmHs9y6CMbAAAAAElFTkSuQmCC
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">kw_gm</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#0000ff&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Gamma&quot;</span><span class="p">)</span>
 <span class="n">kw_sg</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#ff3333&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">r&quot;Sigma&quot;</span><span class="p">)</span>
@@ -2727,6 +2775,7 @@ mBBCCJOSxCKEEMKkJLEIIYQwKUksQgghTEoSixBCCJP6f2EmHs9y6CMbAAAAAElFTkSuQmCC
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZcAAAH4CAYAAACGxKCCAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl4VOX58PHvmTWTZLJMyMKqQgAhyKKAIgoo1apgXWiq
@@ -3224,11 +3273,13 @@ XEltbS0PPfRQSD/7wIED9OjRg6SkJDZv3syKFStYtmxZ0MS9iN1oWEyknWpra5kxYwbp6enMmzcv
 5J9fXFzM0qVLqaur44orrmDOnDkKFrE99VxERCTkdLeYiIiEnMJFRERCTuEiIiIhp3AREZGQU7iI
 iEjIKVxERCTkFC4iIhJyChcREQk5hYuIiITc/wcM4PgEO8DBPQAAAABJRU5ErkJggg==
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p></div>
     <footer>
       <p class="meta">
@@ -3257,6 +3308,9 @@ iEjIKVxERCTkFC4iIhJyChcREQk5hYuIiITc/wcM4PgEO8DBPQAAAABJRU5ErkJggg==
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
             <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2013/08/12/creating-a-correct-map-of-brazilian-states-with-basemap-date-2013-08-12-1245-comments-true-slug-brazil-states-map/">Creating a correct map of Brazilian states with basemap date: 2013-08-12 12:45 comments: true slug: brazil-states-map</a>
+      </li>
+            <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/08/05/custom-binaries/">Reading custom binaries</a>
       </li>
             <li class="post">
@@ -3268,9 +3322,6 @@ iEjIKVxERCTkFC4iIhJyChcREQk5hYuIiITc/wcM4PgEO8DBPQAAAABJRU5ErkJggg==
             <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/07/15/XKCTD/">XKC(T)D plot fun</a>
       </li>
-            <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2013/07/08/CTD2DataFrame_2/">CTD2DataFrame take 2</a>
-      </li>
           </ul>
   </section>
     <section>
@@ -3281,6 +3332,7 @@ iEjIKVxERCTkFC4iIhJyChcREQk5hYuIiITc/wcM4PgEO8DBPQAAAABJRU5ErkJggg==
               <li><a href="http://ocefpaf.github.io/category/misc.html">Misc</a></li>
               <li><a href="http://ocefpaf.github.io/category/plotting.html">Plotting</a></li>
               <li><a href="http://ocefpaf.github.io/category/teaching.html">Teaching</a></li>
+              <li><a href="http://ocefpaf.github.io/category/misc.html">misc</a></li>
           </ul>
   </section>
    

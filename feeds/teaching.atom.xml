@@ -13,7 +13,9 @@
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[1]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt; &lt;span class="c"&gt;# Ativa o modo &amp;quot;pylab&amp;quot;.&lt;/span&gt;
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;pylab&lt;/span&gt;
@@ -33,22 +35,29 @@
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
-&lt;pre&gt;Using matplotlib backend: module://IPython.kernel.zmq.pylab.backend_inline
+&lt;pre&gt;
+Using matplotlib backend: module://IPython.kernel.zmq.pylab.backend_inline
 Populating the interactive namespace from numpy and matplotlib
+
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-Out[1]:&lt;/div&gt;
+    Out[1]:&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
-&lt;pre&gt;&amp;lt;matplotlib.text.Text at 0x3a06510&amp;gt;&lt;/pre&gt;
+
+&lt;pre&gt;
+&amp;lt;matplotlib.text.Text at 0x3a06510&amp;gt;
+&lt;/pre&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYQAAAEWCAYAAABmE+CbAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XlcVPX+P/DXsJiCgCAKyiIuqYAOoCRuJOnVwtTUvLmE
@@ -217,31 +226,38 @@ Tz0FpVKJgIAAlJaW4tVXX5X+gxHpiG2nRFqMHz8eO3bsgI1N8yYFPn36NOLi4hAbGytxMiJpsCAQ
 EREAnjIiIqK/sSAQEREAFgQiIvobCwIREQFgQSAior+xIBAREQDg/wEjg3iu+ltDLgAAAABJRU5E
 rkJggg==
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Digite &amp;quot;comando&amp;quot;? e aperte &amp;quot;shift+enter&amp;quot; para acessar o help daquele comando. Exemplo:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="err"&gt;?&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Agora modifique o plot acima e brinque com o notebook antes de passar para o próximo exercício.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[3]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;ro&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;a, b, c&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -258,15 +274,20 @@ rkJggg==
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-Out[3]:&lt;/div&gt;
+    Out[3]:&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
-&lt;pre&gt;[-0.1, 2.1, 0.8, 3.1]&lt;/pre&gt;
+
+&lt;pre&gt;
+[-0.1, 2.1, 0.8, 3.1]
+&lt;/pre&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXwAAAEVCAYAAADjHF5YAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAEyRJREFUeJzt3V9s0/X+x/FXdRxrGbLtXIzYLZHM6dnYvw5ioxEtFziB
@@ -357,11 +378,13 @@ SdLRo0dVVFSkRYsWaWhoKPaHKq63evVq9fX16eLFi5LEkg5yiit8mPXkk0/q7bffVnV1tR588EE9
 68z/LVfkDl+eBtzgwoULevHFF2NX8ql46aWX1NraqpqamizODLg9BB8AjGANHwCMIPgAYATBBwAj
 CD4AGEHwAcAIgg8ARvwfh7dMuHIQnYsAAAAASUVORK5CYII=
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="exercício-02"&gt;Exercício 02&lt;/h1&gt;
@@ -373,7 +396,9 @@ CD4AGEHwAcAIgg8ARvwfh7dMuHIQnYsAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[4]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;glob&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;glob&lt;/span&gt;
@@ -407,10 +432,13 @@ CD4AGEHwAcAIgg8ARvwfh7dMuHIQnYsAAAAASUVORK5CYII=
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[5]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;lista&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;./data/coroas&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;*.dat&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 
@@ -426,10 +454,13 @@ CD4AGEHwAcAIgg8ARvwfh7dMuHIQnYsAAAAASUVORK5CYII=
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[6]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;lista&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -443,17 +474,22 @@ CD4AGEHwAcAIgg8ARvwfh7dMuHIQnYsAAAAASUVORK5CYII=
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
-&lt;pre&gt;[&amp;apos;./data/coroas/estacao01.dat&amp;apos;, &amp;apos;./data/coroas/estacao02.dat&amp;apos;, &amp;apos;./data/coroas/estacao03.dat&amp;apos;, &amp;apos;./data/coroas/estacao04.dat&amp;apos;, &amp;apos;./data/coroas/estacao05.dat&amp;apos;, &amp;apos;./data/coroas/estacao06.dat&amp;apos;, &amp;apos;./data/coroas/estacao07.dat&amp;apos;, &amp;apos;./data/coroas/estacao08.dat&amp;apos;, &amp;apos;./data/coroas/estacao09.dat&amp;apos;, &amp;apos;./data/coroas/estacao10.dat&amp;apos;, &amp;apos;./data/coroas/estacao11.dat&amp;apos;, &amp;apos;./data/coroas/estacao12.dat&amp;apos;, &amp;apos;./data/coroas/estacao13.dat&amp;apos;, &amp;apos;./data/coroas/estacao14.dat&amp;apos;, &amp;apos;./data/coroas/estacao15.dat&amp;apos;]
+&lt;pre&gt;
+[&amp;apos;./data/coroas/estacao01.dat&amp;apos;, &amp;apos;./data/coroas/estacao02.dat&amp;apos;, &amp;apos;./data/coroas/estacao03.dat&amp;apos;, &amp;apos;./data/coroas/estacao04.dat&amp;apos;, &amp;apos;./data/coroas/estacao05.dat&amp;apos;, &amp;apos;./data/coroas/estacao06.dat&amp;apos;, &amp;apos;./data/coroas/estacao07.dat&amp;apos;, &amp;apos;./data/coroas/estacao08.dat&amp;apos;, &amp;apos;./data/coroas/estacao09.dat&amp;apos;, &amp;apos;./data/coroas/estacao10.dat&amp;apos;, &amp;apos;./data/coroas/estacao11.dat&amp;apos;, &amp;apos;./data/coroas/estacao12.dat&amp;apos;, &amp;apos;./data/coroas/estacao13.dat&amp;apos;, &amp;apos;./data/coroas/estacao14.dat&amp;apos;, &amp;apos;./data/coroas/estacao15.dat&amp;apos;]
+
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[7]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# Bathymetry profile.&lt;/span&gt;
 &lt;span class="n"&gt;dist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gsw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lon&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -482,13 +518,16 @@ CD4AGEHwAcAIgg8ARvwfh7dMuHIQnYsAAAAASUVORK5CYII=
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
-&lt;pre&gt;Shelf angle: -67.9015
+&lt;pre&gt;
+Shelf angle: -67.9015
+
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAb8AAAEMCAYAAABUTbipAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XtUU3eCB/DvBSLKS6lAwKQjKiAgCCiJ1o4OnQq17khx
@@ -690,15 +729,19 @@ BLIsw8fHBzt27Ojws0iSBBcXF+zevRuxsbFwc3N74OSs91+3h5OzUtfAszoQEYqLizFu3DicOXPG
 ZO+ZlpYGd3f3ds/UTSQKN3sSEZycnHDjxg1lkntnpaamYsuWLZzrR1aLIz8iIrI7HPkREZHdYfkR
 EZHdYfkREZHdYfkREZHdYfkREZHd+T+Rgn/bvdR4BAAAAABJRU5ErkJggg==
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[8]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# Map.&lt;/span&gt;
 &lt;span class="n"&gt;offset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;2.&lt;/span&gt;
@@ -737,10 +780,12 @@ EZHdYfkREZHdYfkREZHdYfkREZHd+T+Rgn/bvdR4BAAAAABJRU5ErkJggg==
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-Out[8]:&lt;/div&gt;
+    Out[8]:&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
-&lt;pre&gt;{-48.0: ([&amp;lt;matplotlib.lines.Line2D at 0x5327e90&amp;gt;],
+
+&lt;pre&gt;
+{-48.0: ([&amp;lt;matplotlib.lines.Line2D at 0x5327e90&amp;gt;],
   [&amp;lt;matplotlib.text.Text at 0x532e950&amp;gt;]),
  -47.0: ([&amp;lt;matplotlib.lines.Line2D at 0x532c350&amp;gt;],
   [&amp;lt;matplotlib.text.Text at 0x532eb10&amp;gt;]),
@@ -751,12 +796,15 @@ Out[8]:&lt;/div&gt;
  -44.0: ([&amp;lt;matplotlib.lines.Line2D at 0x532e110&amp;gt;],
   [&amp;lt;matplotlib.text.Text at 0x532ecd0&amp;gt;]),
  -43.0: ([&amp;lt;matplotlib.lines.Line2D at 0x532e590&amp;gt;],
-  [&amp;lt;matplotlib.text.Text at 0x532ed90&amp;gt;])}&lt;/pre&gt;
+  [&amp;lt;matplotlib.text.Text at 0x532ed90&amp;gt;])}
+&lt;/pre&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdoAAAGhCAYAAADGAXWtAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXd8FHX+/5+zJT2hQ0hCQhodKaGZSJeiByqgIHBSlKIo
@@ -2555,11 +2603,13 @@ J2Lz5s246KKLuuY1SPUG0u2dhfqM/jrodT/zzDPxs5/9DDfeeCPuvfdevPGNb8TnP/95XHDBBV3z
 GrS61xJKHeu4llpqqaWWWvag1CEYa6mlllpqqWUPSg20tdRSSy211LIHpQbaWmqppZZaatmDUgNt
 LbXUUksttexBqYG2llpqqaWWWvag1EBbSy211FJLLXtQ/j9kB+fKhu8KxgAAAABJRU5ErkJggg==
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Encontre no script a linha que calcula a distância usando a latitude e a longitude.&lt;/p&gt;
@@ -2574,7 +2624,9 @@ LbXUUksttexBqYG2llpqqaWWWvag1EBbSy211FJLLXtQ/j9kB+fKhu8KxgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[9]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[9]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
@@ -2627,13 +2679,16 @@ LbXUUksttexBqYG2llpqqaWWWvag1EBbSy211FJLLXtQ/j9kB+fKhu8KxgAAAABJRU5ErkJggg==
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Primeiro vamos chamar a função com o argumento &lt;em&gt;default&lt;/em&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[10]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[10]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot_station&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -2647,6 +2702,7 @@ LbXUUksttexBqYG2llpqqaWWWvag1EBbSy211FJLLXtQ/j9kB+fKhu8KxgAAAABJRU5ErkJggg==
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUIAAAGuCAYAAADlKw9lAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl4TGf7wPHvZEWEIJFIgigRYqtqra0qQu1UrRXpoi31
@@ -3070,11 +3126,13 @@ TtjKZ/mfEbEigthVsby06yVCg0IbXF7wHGTRBaFJsFywMPKDkRydcdTVUm5KpiWTpV8vdQyfaSzB
 i4JlHGELQWqEQpPhKR0M/r7+fHv2Wx59/9FGlf/x/I/Er46na1DXJlYmuAqpEQqC4PVIjVAQBK9H
 jFAQBK9HjFAQBK9HjFAQBK9HjFAQBK9HjFAQBK/n/wHMx5ak8hyPnAAAAABJRU5ErkJggg==
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;strong&gt;Exercício:&lt;/strong&gt;&lt;/p&gt;
@@ -3088,7 +3146,9 @@ jFAQBK9HjFAQBK9HjFAQBK9HjFAQBK9HjFAQBK/n/wHMx5ak8hyPnAAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[11]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[11]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;glob&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;glob&lt;/span&gt;
@@ -3112,10 +3172,13 @@ jFAQBK9HjFAQBK9HjFAQBK9HjFAQBK9HjFAQBK/n/wHMx5ak8hyPnAAAAABJRU5ErkJggg==
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[12]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[12]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;lista&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;./data/coroas&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;*.dat&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 
@@ -3154,6 +3217,7 @@ jFAQBK9HjFAQBK9HjFAQBK9HjFAQBK9HjFAQBK/n/wHMx5ak8hyPnAAAAABJRU5ErkJggg==
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXsAAAGCCAYAAAABo2PaAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXdYU2f7x29U3AoBZCOoIIgDRMQqKqiICCJoxbZaR0Fw
@@ -3825,11 +3889,13 @@ czFmzBipinVFngt8uaiqc+fOKCwshJoa67mtrFjLnmEYphJgH/MMwzCVACv2DMMwlQAr9gzDMJUA
 K/YMwzCVACv2DMMwlQAr9gzDMJUAK/YMwzCVACv2DMMwlQAr9gzDMJXA/wGzyH/G5iBcfQAAAABJ
 RU5ErkJggg==
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Note um &amp;quot;braço&amp;quot; de baixa salinidade. Discuta o que isso significa.&lt;/p&gt;

@@ -4,7 +4,9 @@
 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;mpl_toolkits.basemap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Basemap&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.patches&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Polygon&lt;/span&gt;
@@ -13,12 +15,15 @@
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;Now we can define a function to generate the plot:
 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[4]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;make_map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;llcrnrlon&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;49&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;urcrnrlon&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;39&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;llcrnrlat&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;urcrnrlat&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
              &lt;span class="n"&gt;projection&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;merc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;resolution&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;i&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;inset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -55,12 +60,15 @@
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;And here the result:
 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[5]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;make_map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;llcrnrlon&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;48&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;urcrnrlon&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mf"&gt;41.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;llcrnrlat&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mi"&gt;27&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
                   &lt;span class="n"&gt;urcrnrlat&lt;/span&gt;&lt;span class="o"&gt;=-&lt;/span&gt;&lt;span class="mf"&gt;22.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -82,15 +90,20 @@
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-Out[5]:&lt;/div&gt;
+    Out[5]:&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
-&lt;pre&gt;&amp;lt;a list of 4 text.Text objects&amp;gt;&lt;/pre&gt;
+
+&lt;pre&gt;
+&amp;lt;a list of 4 text.Text objects&amp;gt;
+&lt;/pre&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAiAAAAGaCAYAAAA2MPiSAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3XdYVNf28PHvgLQB6UVBRUQpgmDEjt3Yu2KJ8Zpo7BpL
@@ -1125,11 +1138,13 @@ Xbt23fF106dPp7S0lOnTpwNgZmaGnZ3dTavNBaFd+zhbuXIlK1euZPLkyVhYWBhWht+OGGfCvero
 dKIAEQRBEATB6EQBIgiCIAiC0YkCRBAEQRAEoxMFiCAIgiAIRicKEEEQBEEQjO7/AeOtK4+8yM3m
 AAAAAElFTkSuQmCC
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;</summary><category term="plotting"></category><category term="map"></category><category term="inset"></category></entry><entry><title>Plotting AVISO track using a kmz file</title><link href="http://ocefpaf.github.io/blog/2013/06/24/plotting/" rel="alternate"></link><updated>2013-06-24T15:15:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-06-24:blog/2013/06/24/plotting/</id><summary type="html">&lt;p&gt;AVISO &lt;a href="http://www.aviso.oceanobs.com/en/altimetry.html"&gt;Altimetry&lt;/a&gt; data is
 available in two formats, gridded and along-track data.  Sometimes the
 along-track data is desirable, instead of the gridded data, to augment
@@ -1144,7 +1159,9 @@ parser&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[1]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zipfile&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
@@ -1156,12 +1173,15 @@ parser&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;Then we need to define a function to read the kmz file:&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;read_kmz&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fname&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="sd"&gt;r&amp;quot;&amp;quot;&amp;quot;Reads AVISO kmz file and return a dictionary with tracks as&lt;/span&gt;
@@ -1194,13 +1214,16 @@ parser&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;To find the nearest track we used a simple &lt;a href="http://glowingpython.blogspot.com.br/2012/04/k-nearest-neighbor-search.html"&gt;knn_search&lt;/a&gt;
 function. Here is the final result.&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[6]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;tracks&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;read_kmz&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;./data/Visu_J1TP_Interlaced_Tracks_GE_V3.kmz&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -1230,13 +1253,16 @@ function. Here is the final result.&lt;/p&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
-&lt;pre&gt;Nearest track: Ground Track 0050
+&lt;pre&gt;
+Nearest track: Ground Track 0050
+
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfEAAAHYCAYAAABdkdGDAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXd4U9X/x19JOtK9aaG1tOxRluw9FGWpDNnIEFF/IjgQ
@@ -2254,11 +2280,13 @@ e/R9Ybk2O3bswOLFi1FaWopJkyYhLS0Nu3fvbnY/sd4TVOyFQqFQKBSRwvuaOIVCoVAolPZBnTiF
 QqFQKCKFOnEKhUKhUEQKdeIUCoVCoYgU6sQpFAqFQhEp1IlTKBQKhSJS/j/UQwGw8u4cLAAAAABJ
 RU5ErkJggg==
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;</summary><category term="AVISO"></category><category term="plotting"></category><category term="SSH"></category></entry><entry><title>Using Basemap to plot points over a SST figure</title><link href="http://ocefpaf.github.io/blog/2013/05/13/mapping/" rel="alternate"></link><updated>2013-05-13T22:58:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-05-13:blog/2013/05/13/mapping/</id><summary type="html">&lt;p&gt;Plotting a hydrographic cruise over the latest Sea Surface Temperature image
 available can help a lot with the planning and/or interpretation of the cruise
 data.&lt;/p&gt;
@@ -2266,7 +2294,9 @@ data.&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[1]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
@@ -2302,6 +2332,7 @@ data.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Now just download your SST image.&lt;/li&gt;
@@ -2312,7 +2343,9 @@ data.&lt;/p&gt;
 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
+&lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;lon&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;40.77&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;40.51&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;40.30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;40.23&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;40.13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;40.06&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;39.99&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
        &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;39.87&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;39.72&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;39.52&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;39.32&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;39.11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;38.91&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;38.71&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -2333,6 +2366,7 @@ data.&lt;/p&gt;
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
 
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAGfCAYAAACp5SATAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXecJFd177+3UufuiTthdzbnnLUgJIHSKiBZEjIYTDAG
@@ -6792,9 +6826,11 @@ hwPh97jjjvuFybxhY5khDGEIQxjCEH4J4BmvQx/CEIYwhCEMYQjPPAwF+hCGMIQhDGEIvwQwFOhD
 GMIQhjCEIfwSwFCgD2EIQxjCEIbwSwBDgT6EIQxhCEMYwi8B/P/Mll4/E1+4/QAAAABJRU5ErkJg
 gg==
 "&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;&lt;/p&gt;</summary><category term="plotting"></category><category term="basemap"></category><category term="georeference"></category></entry></feed>

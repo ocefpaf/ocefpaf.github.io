@@ -1271,20 +1271,25 @@ init_mathjax();
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 </pre></div>
 
 </div>
 </div>
+
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's define two quick functions to deal with the time standard used in the binary files...</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">netcdftime</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
@@ -1340,13 +1345,16 @@ init_mathjax();
 
 </div>
 </div>
+
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>... and create a class akin to <code>netCDF4</code> Dataset to read the binary file.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">class</span> <span class="nc">Dataset</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Read OASP binary format and store in a object with:</span>
@@ -1425,23 +1433,29 @@ init_mathjax();
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">wbsst</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">(</span><span class="s">&#39;./data/wbsst.bin&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
+
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's checkout the file header:</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">print</span><span class="p">(</span><span class="n">wbsst</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
 </pre></div>
@@ -1455,25 +1469,30 @@ init_mathjax();
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>filename:      WBsst.bin 
+<pre>
+filename:      WBsst.bin 
 creation date: 04/12/**   10:02:13
 start date:    1998-01-10 22:00:00
 end date:      1998-02-06 08:00:00
 increment:     0.5
 record length  1269
+
 </pre>
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Some information regarding the data:</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">print</span><span class="p">(</span><span class="n">wbsst</span><span class="o">.</span><span class="n">stats</span><span class="p">)</span>
 </pre></div>
@@ -1487,24 +1506,29 @@ record length  1269
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>Max: 6.66
+<pre>
+Max: 6.66
 Min: 4.52
 Mean: 5.74
 Median: 5.67
 Std: 0.67
+
 </pre>
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>And finally let's see the data!</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">mpltools</span> <span class="kn">import</span> <span class="n">style</span>
 <span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s">&quot;ggplot&quot;</span><span class="p">)</span>
@@ -1523,6 +1547,7 @@ Std: 0.67
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtgAAAFzCAYAAAAE4H61AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xl8VNX9//HXudmXyU7YIUDCEhZBEBURFEvV4lJFalur
@@ -2088,18 +2113,22 @@ f/7D1Vdf3d1PdUSQ+YqPzFd8ZL7iI/MVH5mv+Mh8CXHk6pEMthBCCCGEEL1Fj17kKIQQQgghxJFO
 AmwhhBBCCCG6kATYQgghhBBCdCEJsIUQQgghhOhCEmALIYQQQgjRhSTAFkIIIYQQogv9f1JCqayP
 XbNkAAAAAElFTkSuQmCC
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The class also create the original parameter file used in the create of the binary.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">print</span><span class="p">(</span><span class="n">wbsst</span><span class="o">.</span><span class="n">par</span><span class="p">)</span>
 </pre></div>
@@ -2113,7 +2142,8 @@ XbNkAAAAAElFTkSuQmCC
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>y
+<pre>
+y
 ./data/wbsst.bin.asc
 1
 1
@@ -2124,12 +2154,14 @@ XbNkAAAAAElFTkSuQmCC
 1,./data/wbsst.bin
 0
 $$
+
 </pre>
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>This post was written entirely as an IPython notebook. The full notebook can be viewed statically (and downloaded) on</em> <a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/custom-binaries.ipynb"><em>nbviewer</em></a></p>
@@ -2160,6 +2192,9 @@ $$
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
             <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2013/08/12/creating-a-correct-map-of-brazilian-states-with-basemap-date-2013-08-12-1245-comments-true-slug-brazil-states-map/">Creating a correct map of Brazilian states with basemap date: 2013-08-12 12:45 comments: true slug: brazil-states-map</a>
+      </li>
+            <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/08/05/custom-binaries/">Reading custom binaries</a>
       </li>
             <li class="post">
@@ -2171,9 +2206,6 @@ $$
             <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/07/15/XKCTD/">XKC(T)D plot fun</a>
       </li>
-            <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2013/07/08/CTD2DataFrame_2/">CTD2DataFrame take 2</a>
-      </li>
           </ul>
   </section>
     <section>
@@ -2184,6 +2216,7 @@ $$
               <li><a href="http://ocefpaf.github.io/category/misc.html">Misc</a></li>
               <li><a href="http://ocefpaf.github.io/category/plotting.html">Plotting</a></li>
               <li><a href="http://ocefpaf.github.io/category/teaching.html">Teaching</a></li>
+              <li><a href="http://ocefpaf.github.io/category/misc.html">misc</a></li>
           </ul>
   </section>
    

@@ -1269,7 +1269,9 @@ explore data in oceans sciences.</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 <span class="k">def</span> <span class="nf">css_styling</span><span class="p">():</span>
@@ -1286,8 +1288,9 @@ explore data in oceans sciences.</p>
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[14]:</div>
+    Out[14]:</div>
 <div class="box-flex1 output_subarea output_pyout">
+
 <div class="output_html rendered_html">
 <style>
     @font-face {
@@ -1356,25 +1359,32 @@ Out[14]:</div>
 </script>
 
 </div>
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
 </pre></div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">sympy</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
@@ -1392,18 +1402,23 @@ Out[14]:</div>
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>SymPy version: 0.7.3
+<pre>
+SymPy version: 0.7.3
 NumPy version: 1.7.1
+
 </pre>
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="kn">as</span> <span class="nn">ma</span>
@@ -1422,10 +1437,13 @@ NumPy version: 1.7.1
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">c</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s">&#39;c&#39;</span><span class="p">)</span>
 <span class="n">k</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s">&#39;k&#39;</span><span class="p">)</span>
@@ -1433,10 +1451,13 @@ NumPy version: 1.7.1
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="o">-</span><span class="n">c</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">),</span> <span class="o">-</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span><span class="p">,</span>  <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)],</span>
             <span class="p">[</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">c</span><span class="p">,</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)],</span>
@@ -1452,19 +1473,24 @@ NumPy version: 1.7.1
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[5]:</div>
+    Out[5]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
+
 $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} & - \frac{e^{- \frac{k}{2}}}{k} & \frac{e^{- k}}{2 k}\\\frac{e^{- \frac{k}{2}}}{2 k} & - c + 0.5 - \frac{1}{k} & \frac{e^{- \frac{k}{2}}}{2 k}\\\frac{e^{- k}}{2 k} & - \frac{e^{- \frac{k}{2}}}{k} & - c + \frac{1}{2 k}\end{smallmatrix}\right]$$
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">det</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">det</span><span class="p">()</span>
 <span class="n">det</span>
@@ -1478,19 +1504,24 @@ $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} & - \frac{e^{- \frac{k}{2}}}{k}
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[6]:</div>
+    Out[6]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
+
 $$- c^{3} + 0.5 c^{2} - \frac{0.5 c}{k} + \frac{3 c}{4 k^{2}} - \frac{c}{k^{2}} e^{- k} + \frac{c e^{- 2 k}}{4 k^{2}} + \frac{0.125}{k^{2}} - \frac{0.125}{k^{2}} e^{- 2 k} - \frac{1}{4 k^{3}} + \frac{e^{- k}}{2 k^{3}} - \frac{e^{- 2 k}}{4 k^{3}}$$
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">K</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">det</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 <span class="n">K</span>
@@ -1504,19 +1535,24 @@ $$- c^{3} + 0.5 c^{2} - \frac{0.5 c}{k} + \frac{3 c}{4 k^{2}} - \frac{c}{k^{2}} 
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[7]:</div>
+    Out[7]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
+
 $$\begin{bmatrix}\frac{0.25}{k^{2}} \left(k^{2} e^{k} - k e^{k} + k - \sqrt{k^{4} e^{2.0 k} - 2.0 k^{3} e^{k} - 6.0 k^{3} e^{2.0 k} - 10.0 k^{2} e^{k} + 9.0 k^{2} e^{2.0 k} + k^{2}}\right) e^{- k}, & \frac{0.25}{k^{2}} \left(k^{2} e^{k} - k e^{k} + k + \sqrt{k^{4} e^{2.0 k} - 2.0 k^{3} e^{k} - 6.0 k^{3} e^{2.0 k} - 10.0 k^{2} e^{k} + 9.0 k^{2} e^{2.0 k} + k^{2}}\right) e^{- k}, & \frac{0.5}{k} \left(e^{k} - 1.0\right) e^{- k}\end{bmatrix}$$
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">dk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
 
@@ -1532,10 +1568,13 @@ $$\begin{bmatrix}\frac{0.25}{k^{2}} \left(k^{2} e^{k} - k e^{k} + k - \sqrt{k^{4
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">print</span><span class="p">(</span><span class="s">&quot;NaNs in C1: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">C1</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&quot;NaNs in C2: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">C2</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
@@ -1551,19 +1590,24 @@ $$\begin{bmatrix}\frac{0.25}{k^{2}} \left(k^{2} e^{k} - k e^{k} + k - \sqrt{k^{4
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>NaNs in C1: False
+<pre>
+NaNs in C1: False
 NaNs in C2: False
 NaNs in C3: False
+
 </pre>
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">print</span><span class="p">(</span><span class="s">&quot;Complex in C1: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">iscomplex</span><span class="p">(</span><span class="n">C1</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&quot;Complex in C2: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">iscomplex</span><span class="p">(</span><span class="n">C2</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
@@ -1579,29 +1623,37 @@ NaNs in C3: False
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>Complex in C1: True
+<pre>
+Complex in C1: True
 Complex in C2: True
 Complex in C3: False
+
 </pre>
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">C3</span> <span class="o">=</span> <span class="n">C3</span><span class="o">.</span><span class="n">real</span>  <span class="c"># No need to be imaginary.</span>
 </pre></div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">l1</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dk</span><span class="p">,</span> <span class="n">C1</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="s">&#39;:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;C1&#39;</span><span class="p">)</span>
@@ -1621,6 +1673,7 @@ Complex in C3: False
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXsAAAD9CAYAAABdoNd6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xl8G+d95/HPzOAmwAMAAR4gKZ4SSZ0WJR+ypViOEttp
@@ -1825,15 +1878,19 @@ urq6FFc99Z555hkOHjzIxYsXyc/PZ82aNcTjcSDRDgDPPfccLS0t2Gw2vvCFL1BVVZXKkqfN9doi
 W44JgMOHD/O1r32N8vJyFCWxtsUnPvGJ0X8RZ9uxcSPtMdHjQ8JeCCGygHTjCCFEFpCwF0KILCBh
 L4QQWUDCXgghsoCEvRBCZAEJeyGEyAL/H8CuJ5i7aW1TAAAAAElFTkSuQmCC
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">l1</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dk</span><span class="p">,</span> <span class="n">C1</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="s">&#39;-,&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&#39;C1&#39;</span><span class="p">)</span>
@@ -1853,6 +1910,7 @@ L4QQWUDCXgghsoCEvRBCZAEJeyGEyAL/H8CuJ5i7aW1TAAAAAElFTkSuQmCC
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
+
 
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAD9CAYAAACx+XApAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xl8W9Wd9/HPXbRZq2XHdhxndXYTtoSQktJASlqWKYRp
@@ -2078,17 +2136,21 @@ WbKERCIBWG0BsHLlSmpra3E6nVx//fVMmjQpk1U+ZU7UFoW0X2zbto3vfve7jBs3Lrlg0dVXX53s
 TRfSvjGYtjjZfUOCQAghCpwMDQkhRIGTIBBCiAInQSCEEAVOgkAIIQqcBIEQQhQ4CQIhhChw/x9D
 7Xl8Kh9YnwAAAABJRU5ErkJggg==
 ">
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p>
 <p>Now just some cells (from the same notebook):</p>
 <p>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="o">-</span><span class="n">c</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">),</span> <span class="o">-</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span><span class="p">,</span>  <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)],</span>
             <span class="p">[</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">c</span><span class="p">,</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k</span><span class="p">)],</span>
@@ -2104,15 +2166,18 @@ TRfSvjGYtjjZfUOCQAghCpwMDQkhRIGTIBBCiAInQSCEEAVOgkAIIQqcBIEQQhQ4CQIhhChw/x9D
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-Out[5]:</div>
+    Out[5]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
+
 $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} & - \frac{e^{- \frac{k}{2}}}{k} & \frac{e^{- k}}{2 k}\\\frac{e^{- \frac{k}{2}}}{2 k} & - c + 0.5 - \frac{1}{k} & \frac{e^{- \frac{k}{2}}}{2 k}\\\frac{e^{- k}}{2 k} & - \frac{e^{- \frac{k}{2}}}{k} & - c + \frac{1}{2 k}\end{smallmatrix}\right]$$
+
 </div>
 </div>
 
 </div>
 </div>
+
 </div></p>
 <p>Include code examples:</p>
 <figure class='code'>
@@ -2163,6 +2228,9 @@ $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} & - \frac{e^{- \frac{k}{2}}}{k}
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
             <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2013/08/12/creating-a-correct-map-of-brazilian-states-with-basemap-date-2013-08-12-1245-comments-true-slug-brazil-states-map/">Creating a correct map of Brazilian states with basemap date: 2013-08-12 12:45 comments: true slug: brazil-states-map</a>
+      </li>
+            <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/08/05/custom-binaries/">Reading custom binaries</a>
       </li>
             <li class="post">
@@ -2174,9 +2242,6 @@ $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} & - \frac{e^{- \frac{k}{2}}}{k}
             <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/07/15/XKCTD/">XKC(T)D plot fun</a>
       </li>
-            <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2013/07/08/CTD2DataFrame_2/">CTD2DataFrame take 2</a>
-      </li>
           </ul>
   </section>
     <section>
@@ -2187,6 +2252,7 @@ $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} & - \frac{e^{- \frac{k}{2}}}{k}
               <li><a href="http://ocefpaf.github.io/category/misc.html">Misc</a></li>
               <li><a href="http://ocefpaf.github.io/category/plotting.html">Plotting</a></li>
               <li><a href="http://ocefpaf.github.io/category/teaching.html">Teaching</a></li>
+              <li><a href="http://ocefpaf.github.io/category/misc.html">misc</a></li>
           </ul>
   </section>
    
