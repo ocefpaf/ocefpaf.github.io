@@ -1264,6 +1264,10 @@ init_mathjax();
 
   <div class="entry-content"><p>
 <div class="text_cell_render border-box-sizing rendered_html">
+
+<p><a href="http://matplotlib.org/basemap/">basemap</a> is an excelent tool, but its database lacks up-to-date information regarding the modern states boundaries in Brazil. This post is to show how to overcome that with an custom shapefile. </p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>The political boundaries data shipped with basemap is OK for North America and Europe, but it is outdated by several <a href="http://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Mato_Grosso#Divis.C3.A3o_do_estado">years</a> for South America. In order to draw a more acurate map we need to use custom data from more up-to-date sources.</p>
 <p>One source of data are the shapefiles from the <a href="http://www.gadm.org/country">&quot;GADM database of Global Administrative Areas&quot;</a>. With that data and matplotlib's Polygon we can crate a similar drawstates function to override basemap's defaults.</p>
 </div>

@@ -3,6 +3,10 @@
 
 &lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+
+&lt;p&gt;Every now and then we stumble upon some wierd custom binary file containing that precious piece of data. This post show how to read the most wierd one I've see so far. &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;My former advisor had all his data stored in a custom binary format he called &amp;quot;OASP&amp;quot; (instead of using the wonderful, machine independent, feature-rich &lt;a href="http://cf-pcmdi.llnl.gov/"&gt;netcdf&lt;/a&gt; with climate and forecast metadata that we all should be using!).&lt;/p&gt;
 &lt;p&gt;His programs to read such data were not working anymore due to &lt;a href="http://en.wikipedia.org/wiki/Endianness"&gt;endianness&lt;/a&gt; issues. Therefore, to read that data (and hopefully graduate one day) I had workaround these issues relying heavily on numpy &lt;a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.fromfile.html"&gt;fromfile&lt;/a&gt; function.&lt;/p&gt;
 &lt;/div&gt;

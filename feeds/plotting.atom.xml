@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/plotting.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-08-12T12:45:00-03:00</updated><entry><title>Creating a correct map of Brazilian states with basemap</title><link href="http://ocefpaf.github.io/blog/2013/08/12/brazil-states-map/" rel="alternate"></link><updated>2013-08-12T12:45:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-08-12:blog/2013/08/12/brazil-states-map/</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+
+&lt;p&gt;&lt;a href="http://matplotlib.org/basemap/"&gt;basemap&lt;/a&gt; is an excelent tool, but its database lacks up-to-date information regarding the modern states boundaries in Brazil. This post is to show how to overcome that with an custom shapefile. &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The political boundaries data shipped with basemap is OK for North America and Europe, but it is outdated by several &lt;a href="http://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Mato_Grosso#Divis.C3.A3o_do_estado"&gt;years&lt;/a&gt; for South America. In order to draw a more acurate map we need to use custom data from more up-to-date sources.&lt;/p&gt;
 &lt;p&gt;One source of data are the shapefiles from the &lt;a href="http://www.gadm.org/country"&gt;&amp;quot;GADM database of Global Administrative Areas&amp;quot;&lt;/a&gt;. With that data and matplotlib's Polygon we can crate a similar drawstates function to override basemap's defaults.&lt;/p&gt;
 &lt;/div&gt;
