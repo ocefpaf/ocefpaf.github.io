@@ -1573,21 +1573,21 @@ $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} &amp; - \frac{e^{- \frac{k}{2}}
 &lt;figure class='code'&gt;
 &lt;figcaption&gt;&lt;span&gt;[Code test] hello_world.py&lt;/span&gt; &lt;a href='/downloads/code/hello_world.py'&gt;download&lt;/a&gt;&lt;/figcaption&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
-&lt;span class="cp"&gt;# hello_world.py&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
-&lt;span class="cp"&gt;# purpose:&lt;/span&gt;
-&lt;span class="cp"&gt;# author:   Filipe P. A. Fernandes&lt;/span&gt;
-&lt;span class="cp"&gt;# e-mail:   ocefpaf@gmail&lt;/span&gt;
-&lt;span class="cp"&gt;# web:      http:&lt;/span&gt;&lt;span class="c1"&gt;//ocefpaf.tiddlyspot.com/&lt;/span&gt;
-&lt;span class="cp"&gt;# created:  09-May-2013&lt;/span&gt;
-&lt;span class="cp"&gt;# modified: Thu 09 May 2013 03:03:13 PM BRT&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
-&lt;span class="cp"&gt;# obs:&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# hello_world.py&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# purpose:&lt;/span&gt;
+&lt;span class="c"&gt;# author:   Filipe P. A. Fernandes&lt;/span&gt;
+&lt;span class="c"&gt;# e-mail:   ocefpaf@gmail&lt;/span&gt;
+&lt;span class="c"&gt;# web:      http://ocefpaf.tiddlyspot.com/&lt;/span&gt;
+&lt;span class="c"&gt;# created:  09-May-2013&lt;/span&gt;
+&lt;span class="c"&gt;# modified: Thu 09 May 2013 03:03:13 PM BRT&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# obs:&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
 
-&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

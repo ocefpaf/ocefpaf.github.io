@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-08-12T12:45:00-03:00</updated><entry><title>Creating a correct map of Brazilian states with basemap</title><link href="http://ocefpaf.github.io/blog/2013/08/12/brazil-states-map/" rel="alternate"></link><updated>2013-08-12T12:45:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-08-12:blog/2013/08/12/brazil-states-map/</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-08-20T23:45:00-03:00</updated><entry><title>Creating a correct map of Brazilian states with basemap Part 2</title><link href="http://ocefpaf.github.io/blog/2013/08/20/brazil-states-map2/" rel="alternate"></link><updated>2013-08-20T23:45:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-08-20:blog/2013/08/20/brazil-states-map2/</id><summary type="html">&lt;p&gt;Several people brought to my attention that the current shapefiles hosted at
+&lt;a href="http://www.gadm.org/"&gt;GADM&lt;/a&gt; are not up-to-date as the one I plotted.  Well,
+they where in the past (just look at their front figure).&lt;/p&gt;
+&lt;p&gt;Apparently they updated to the same bad boundaries that are present in GMT
+and basemap.  Unfortunately I cannot host the good old ones, because their
+license do do allow re-distribution of their data.  That policy is kind of
+against their logo "Boundaries without limits", maybe "Boundaries with some
+limits would be more appropriated".&lt;/p&gt;
+&lt;p&gt;Unfortunately, I'm searching without success for a substitute.  The Brazilian
+&lt;a href="http://www.ibge.gov.br/english/"&gt;IBGE&lt;/a&gt; provide only KML adn KMZ files that,
+when converted, are not readable by basemap.&lt;/p&gt;
+&lt;p&gt;As soon as I find an alternative source I'll update the post.&lt;/p&gt;</summary><category term="plotting"></category><category term="teaching"></category></entry><entry><title>Creating a correct map of Brazilian states with basemap</title><link href="http://ocefpaf.github.io/blog/2013/08/12/brazil-states-map/" rel="alternate"></link><updated>2013-08-12T12:45:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-08-12:blog/2013/08/12/brazil-states-map/</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 
 &lt;p&gt;&lt;a href="http://matplotlib.org/basemap/"&gt;basemap&lt;/a&gt; is an excelent tool, but its database lacks up-to-date information regarding the modern states boundaries in Brazil. This post is to show how to overcome that with an custom shapefile. &lt;/p&gt;
@@ -19167,21 +19178,21 @@ $$\left[\begin{smallmatrix}{}- c + \frac{1}{2 k} &amp; - \frac{e^{- \frac{k}{2}}
 &lt;figure class='code'&gt;
 &lt;figcaption&gt;&lt;span&gt;[Code test] hello_world.py&lt;/span&gt; &lt;a href='/downloads/code/hello_world.py'&gt;download&lt;/a&gt;&lt;/figcaption&gt;
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
-&lt;span class="cp"&gt;# hello_world.py&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
-&lt;span class="cp"&gt;# purpose:&lt;/span&gt;
-&lt;span class="cp"&gt;# author:   Filipe P. A. Fernandes&lt;/span&gt;
-&lt;span class="cp"&gt;# e-mail:   ocefpaf@gmail&lt;/span&gt;
-&lt;span class="cp"&gt;# web:      http:&lt;/span&gt;&lt;span class="c1"&gt;//ocefpaf.tiddlyspot.com/&lt;/span&gt;
-&lt;span class="cp"&gt;# created:  09-May-2013&lt;/span&gt;
-&lt;span class="cp"&gt;# modified: Thu 09 May 2013 03:03:13 PM BRT&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
-&lt;span class="cp"&gt;# obs:&lt;/span&gt;
-&lt;span class="cp"&gt;#&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# hello_world.py&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# purpose:&lt;/span&gt;
+&lt;span class="c"&gt;# author:   Filipe P. A. Fernandes&lt;/span&gt;
+&lt;span class="c"&gt;# e-mail:   ocefpaf@gmail&lt;/span&gt;
+&lt;span class="c"&gt;# web:      http://ocefpaf.tiddlyspot.com/&lt;/span&gt;
+&lt;span class="c"&gt;# created:  09-May-2013&lt;/span&gt;
+&lt;span class="c"&gt;# modified: Thu 09 May 2013 03:03:13 PM BRT&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# obs:&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
 
-&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

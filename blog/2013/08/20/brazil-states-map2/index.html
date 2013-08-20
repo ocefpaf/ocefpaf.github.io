@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>python-gsw</title>
+  <title>Creating a correct map of Brazilian states with basemap Part 2</title>
   <meta name="author" content="Filipe Fernandes">
 
     <link href="/atom.xml" type="application/atom+xml" rel="alternate"
@@ -1258,73 +1258,33 @@ init_mathjax();
       <div>
   <article class="hentry" role="article">
     <header>
-          <h1 class="entry-title">python-gsw</h1>
-          <p class="meta"><time datetime="2013-07-01T13:42:00" pubdate>Jul 01, 2013</time></p>
+          <h1 class="entry-title">Creating a correct map of Brazilian states with basemap Part 2</h1>
+          <p class="meta"><time datetime="2013-08-20T23:45:00" pubdate>Aug 20, 2013</time></p>
 </header>
 
-  <div class="entry-content"><p>The <a href="http://code.google.com/p/python-gsw/">python-gsw</a> module, used in some of
-my previous posts, is an incomplete and unstable version for the
-<a href="http://www.teos-10.org/software.htm#1">Matlab gibbs toolbox</a>.  Because it is
-in constant development the best way to obtain it is to go straight to the
-<a href="http://code.google.com/p/python-gsw/source/browse/">source code</a>.</p>
-<p>The TEOS-10 <a href="http://www.teos-10.org/pubs/TEOS-10_Primer.pdf">primer</a> is an
-excellent place to start before using this toolbox.  It supersedes the now
-obsolete <a href="http://code.google.com/p/python-seawater/">EOS-80</a> seawater module.</p>
-<p>To obtain the latest version of this module you must install <a href="http://mercurial.selenic.com/">mercurial</a> first, then you'll be able to clone the
-repository:</p>
-<div class="highlight"><pre>hg clone https://code.google.com/p/python-gsw/
-</pre></div>
-
-
-<p>Then just add the <strong>python-gsw/gsw</strong> directory into your <strong>PYTHONPATH</strong> so you
-can import it from anywhere.  To update just go into that directory and type:</p>
-<div class="highlight"><pre>hg pull
-hg update
-</pre></div>
-
-
-<p>My work-flow is to download all modules that are in a development phase into a
-"pymodules" directory and then create a symlink inside a local folder that is
-added to the <strong>PYTHONPATH</strong> in my .bashrc.</p>
-<p>Here is a small example of some functions present in the module:</p>
-<p>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[12]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># Derive.</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">downcast</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;depth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">gsw</span><span class="o">.</span><span class="n">z_from_p</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
-<span class="c"># ctm [mS/cm] = ctm [S/m] * 10</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gsw</span><span class="o">.</span><span class="n">SP_from_C</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;c0S/m&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;t090C&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gsw</span><span class="o">.</span><span class="n">SA_from_SP</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SP&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;CT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gsw</span><span class="o">.</span><span class="n">CT_from_t</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SA&#39;</span><span class="p">],</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;t090C&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;sigma0_CT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gsw</span><span class="o">.</span><span class="n">sigma0_CT_exact</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SA&#39;</span><span class="p">],</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;CT&#39;</span><span class="p">])</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;sound&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gsw</span><span class="o">.</span><span class="n">sound_speed_CT_exact</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SA&#39;</span><span class="p">],</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;CT&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">)</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;gamma&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gamma_GP_from_SP_pt</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SA&#39;</span><span class="p">],</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;CT&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
-<span class="c"># Does&#39;t fit the DataFrame because the index in at the middle (p_mid) point of the original data.</span>
-<span class="n">N2</span><span class="p">,</span> <span class="n">p_mid</span> <span class="o">=</span> <span class="n">gsw</span><span class="o">.</span><span class="n">Nsquared</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SA&#39;</span><span class="p">],</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;CT&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="n">lat</span><span class="p">)</span>
-<span class="n">downcast</span><span class="p">[</span><span class="s">&#39;aou&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">o2sat</span><span class="p">(</span><span class="n">downcast</span><span class="p">[</span><span class="s">&#39;SA&#39;</span><span class="p">],</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;CT&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="n">downcast</span><span class="p">[</span><span class="s">&#39;sbeox0Mm/Kg&#39;</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-
-</div></p></div>
+  <div class="entry-content"><p>Several people brought to my attention that the current shapefiles hosted at
+<a href="http://www.gadm.org/">GADM</a> are not up-to-date as the one I plotted.  Well,
+they where in the past (just look at their front figure).</p>
+<p>Apparently they updated to the same bad boundaries that are present in GMT
+and basemap.  Unfortunately I cannot host the good old ones, because their
+license do do allow re-distribution of their data.  That policy is kind of
+against their logo "Boundaries without limits", maybe "Boundaries with some
+limits would be more appropriated".</p>
+<p>Unfortunately, I'm searching without success for a substitute.  The Brazilian
+<a href="http://www.ibge.gov.br/english/">IBGE</a> provide only KML adn KMZ files that,
+when converted, are not readable by basemap.</p>
+<p>As soon as I find an alternative source I'll update the post.</p></div>
     <footer>
       <p class="meta">
   <span class="byline author vcard">
     Posted by <span class="fn">Filipe Fernandes</span>
   </span>
-  <time datetime="2013-07-01T13:42:00" pubdate>Jul 01, 2013</time>    <span class="categories">
-        <a class="category" href="http://ocefpaf.github.io/tag/data-analysis.html">data analysis</a>
-        <a class="category" href="http://ocefpaf.github.io/tag/hydrography.html">hydrography</a>
-        <a class="category" href="http://ocefpaf.github.io/tag/seawater.html">seawater</a>
+  <time datetime="2013-08-20T23:45:00" pubdate>Aug 20, 2013</time>    <span class="categories">
+        <a class="category" href="http://ocefpaf.github.io/tag/plotting.html">plotting</a>
+        <a class="category" href="http://ocefpaf.github.io/tag/teaching.html">teaching</a>
       </span>
   </p>      <div class="sharing">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ocefpaf.github.io/blog/2013/07/01/gsw/" data-via="ocefpaf" data-counturl="http://ocefpaf.github.io/blog/2013/07/01/gsw/" >Tweet</a>
+    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ocefpaf.github.io/blog/2013/08/20/brazil-states-map2/" data-via="ocefpaf" data-counturl="http://ocefpaf.github.io/blog/2013/08/20/brazil-states-map2/" >Tweet</a>
       <div class="g-plusone" data-size="medium"></div>
     </div>    </footer>
   </article>
@@ -1438,9 +1398,9 @@ In&nbsp;[12]:
 	    } catch(err) {}
 	</script>
 	<script type="text/javascript">
-	            var disqus_identifier = 'http://ocefpaf.github.io/blog/2013/07/01/gsw/';
-          var disqus_url = 'http://ocefpaf.github.io/blog/2013/07/01/gsw/';
-	  var disqus_title = 'python-gsw';
+	            var disqus_identifier = 'http://ocefpaf.github.io/blog/2013/08/20/brazil-states-map2/';
+          var disqus_url = 'http://ocefpaf.github.io/blog/2013/08/20/brazil-states-map2/';
+	  var disqus_title = 'Creating a correct map of Brazilian states with basemap Part 2';
 	  	  var disqus_shortname = 'python4oceanographers';
 	  (function() {
 	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
