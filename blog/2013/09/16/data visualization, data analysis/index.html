@@ -1311,7 +1311,7 @@ In&nbsp;[3]:
 <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_annual_5deg.nc&#39;</span>
 <span class="n">cubes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">cube</span> <span class="ow">in</span> <span class="n">load_cubes</span><span class="p">([</span><span class="n">url</span><span class="p">]):</span>
-   <span class="n">cubes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">c</span><span class="o">.</span><span class="n">long_name</span><span class="p">:</span> <span class="n">cube</span><span class="p">})</span>
+   <span class="n">cubes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">cube</span><span class="o">.</span><span class="n">long_name</span><span class="p">:</span> <span class="n">cube</span><span class="p">})</span>
     
 <span class="n">cubes</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
@@ -1369,7 +1369,7 @@ In&nbsp;[5]:
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">iris.quickplot</span> <span class="kn">as</span> <span class="nn">qplt</span>
 
-<span class="n">_</span> <span class="o">=</span> <span class="n">qplt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s">&#39;both&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">odv</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">qplt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s">&#39;both&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">odv</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2073,7 +2073,7 @@ In&nbsp;[6]:
 <span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
-<span class="n">cs</span> <span class="o">=</span> <span class="n">iplt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">odv</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">levels</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">iplt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">odv</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">levels</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s">&#39;both&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">stock_img</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
 <span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">()</span>
@@ -6438,12 +6438,57 @@ HzLravAtAJKdAAAAAElFTkSuQmCC
 <p>In conclusion, <code>iris.quickplot</code> is definately the way to go went exploring data. However, when you need more customization you will probably do better with <code>iris.plot</code> or even extracting the data yourself.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Check this post at <a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/python-iris.ipynb"><em>nbviewer</em>.</a></p>
+<p>Take a look at the docs and the following talk (giving at Scipy 2013) to learn more about these two packages.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[7]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">34</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s">&quot;MW9wmGsscrs&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">autoplay</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">theme</span><span class="o">=</span><span class="s">&quot;light&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt output_prompt">
+    Out[7]:</div>
+<div class="box-flex1 output_subarea output_pyout">
+
+<div class="output_html rendered_html">
+
+        <iframe
+            width="400"
+            height=300"
+            src="http://www.youtube.com/embed/MW9wmGsscrs?color=red&start=34&theme=light&autoplay=0"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Check this post at <a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/python-iris.ipynb"><em>nbviewer</em>.</a></p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
@@ -6457,7 +6502,7 @@ In&nbsp;[7]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[7]:</div>
+    Out[8]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
