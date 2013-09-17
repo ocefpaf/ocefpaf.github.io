@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-09-16T10:04:00-03:00</updated><entry><title>Using iris to read gridded files</title><link href="http://ocefpaf.github.io/blog/2013/09/16/data%20visualization,%20data%20analysis/" rel="alternate"></link><updated>2013-09-16T10:04:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-09-16:blog/2013/09/16/data visualization, data analysis/</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-09-16T10:04:00-03:00</updated><entry><title>Using iris to read gridded files</title><link href="http://ocefpaf.github.io/blog/2013/09/16/iris/" rel="alternate"></link><updated>2013-09-16T10:04:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-09-16:blog/2013/09/16/iris/</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;I'm learning to use &lt;a href="http://scitools.org.uk/iris/"&gt;iris&lt;/a&gt; cubes and &lt;a href="http://scitools.org.uk/cartopy/"&gt;cartopy&lt;/a&gt; plotting. Both libraries are part of the SciTools package developed by the UK Met Ofiice:&lt;/p&gt;
 &lt;/div&gt;
@@ -5261,7 +5261,7 @@ rel="dct:source"&gt;http://ocefpaf.github.io/&lt;/a&gt;.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/p&gt;</summary><category term="downloading"></category></entry><entry><title>Downloading several hdf files from a server</title><link href="http://ocefpaf.github.io/blog/2013/09/09/hdf/" rel="alternate"></link><updated>2013-09-09T13:18:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-09-09:blog/2013/09/09/hdf/</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary><category term="data visualization"></category><category term="data analysis"></category><category term="teaching"></category></entry><entry><title>Downloading several hdf files from a server</title><link href="http://ocefpaf.github.io/blog/2013/09/09/hdf/" rel="alternate"></link><updated>2013-09-09T13:18:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-09-09:blog/2013/09/09/hdf/</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Manually downloading several hdf files is, most of the time, impractical. Some time ago I helped a friend to do so with a simple python script. This post is just a review of that script so others can modify/re-use it for other cases.&lt;/p&gt;
 &lt;/div&gt;
