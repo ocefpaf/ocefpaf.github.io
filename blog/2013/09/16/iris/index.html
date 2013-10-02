@@ -7,10 +7,10 @@
   <title>Using iris to read gridded files</title>
   <meta name="author" content="Filipe Fernandes">
 
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate"
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate"
         title="python4oceanographers Atom Feed" />
-    
-      <style type="text/css">
+
+    <style type="text/css">
 /**
  * A few custom modifications to the default output:
  * div.ipynb:
@@ -1212,7 +1212,7 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-  
+
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -1233,11 +1233,11 @@ init_mathjax();
 <body>
   <header role="banner"><hgroup>
   <h1><a href="http://ocefpaf.github.io/">python4oceanographers</a></h1>
-      <h2>Learn python with examples applied to marine sciences.</h2>
-  </hgroup></header>
+    <h2>Learn python with examples applied to marine sciences.</h2>
+</hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss">RSS</a></li>
-  </ul>
+</ul>
 
 
 <form action="http://google.com/search" method="get">
@@ -1249,22 +1249,22 @@ init_mathjax();
 
 <ul class="main-navigation">
   <li><a href="http://ocefpaf.github.io/">Blog</a></li>
-      <li><a href="/archives.html">Archives</a></li>
-      <li><a href="http://ocefpaf.tiddlyspot.com/">Home Page</a></li>
-            <!-- TODO: add categories here? -->
-  </ul></nav>
+    <li><a href="/archives.html">Archives</a></li>
+    <li><a href="http://ocefpaf.tiddlyspot.com/">Home Page</a></li>
+    <!-- TODO: add categories here? -->
+</ul></nav>
   <div id="main">
     <div id="content">
-      <div>
+<div>
   <article class="hentry" role="article">
-    <header>
-          <h1 class="entry-title">Using iris to read gridded files</h1>
-          <p class="meta"><time datetime="2013-09-16T10:04:00" pubdate>Sep 16, 2013</time></p>
+<header>
+      <h1 class="entry-title">Using iris to read gridded files</h1>
+      <p class="meta"><time datetime="2013-09-16T10:04:00" pubdate>Sep 16, 2013</time></p>
 </header>
 
   <div class="entry-content"><p>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I'm learning to use <a href="http://scitools.org.uk/iris/">iris</a> cubes and <a href="http://scitools.org.uk/cartopy/">cartopy</a> plotting. Both libraries are part of the SciTools package developed by the UK Met Ofiice:</p>
+<p>I'm experimenting with <a href="http://scitools.org.uk/iris/">iris</a> cubes and <a href="http://scitools.org.uk/cartopy/">cartopy</a> plotting. Both libraries are part of the SciTools package developed by the UK Met Office:</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -1298,8 +1298,8 @@ In&nbsp;[2]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>They are great for loading, exploring, analysing and visualizing gridded dataset like models output. <code>iris</code> support netCDF, GRIB, and PP formats so far.</p>
-<p>Here is a quick example on how to load and plot data from a <code>dap</code> url.</p>
+<p>They are great for loading, exploring, analyzing and visualizing gridded data like model outputs. <code>iris</code> supports netCDF, GRIB, and PP formats so far.</p>
+<p>Here is a quick example to load and plot data from a <code>dap</code> url.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -1307,7 +1307,9 @@ In&nbsp;[2]:
 In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">iris.fileformats.netcdf</span> <span class="kn">import</span> <span class="n">load_cubes</span>
+<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">oceans.colormaps</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">from</span> <span class="nn">iris.fileformats.netcdf</span> <span class="kn">import</span> <span class="n">load_cubes</span>
+
 <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_annual_5deg.nc&#39;</span>
 <span class="n">cubes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">cube</span> <span class="ow">in</span> <span class="n">load_cubes</span><span class="p">([</span><span class="n">url</span><span class="p">]):</span>
@@ -1343,7 +1345,7 @@ In&nbsp;[3]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now let's perform a horizontal slices at the <code>Statistical Mean</code> variable/cube. <code>.slices</code> return an iterator along the depth dimension, so when we use <code>.next()</code> we extract the first depth level only.</p>
+<p>Now let's perform a horizontal slices at the <code>Statistical Mean</code> variable. <code>.slices</code> return an iterator along the depth dimension, so when we use <code>.next()</code> we extract the first depth level only.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -1359,7 +1361,7 @@ In&nbsp;[4]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Iris provide its own plotting modules. First let's try the <code>iris.quickplot</code>:</p>
+<p><code>iris</code> provides its own plotting modules. Let's test the <code>iris.quickplot</code>:</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -2059,7 +2061,7 @@ h1ToKoqi5JAKXUVRlBxSoasoipJDKnQVRVFySIWuoihKDv1/UHEyhQycGVQAAAAASUVORK5CYII=
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A nice feature of <code>iris.quickplot</code> is that it &quot;knows&quot; about the <code>cube's</code> metadata. Therefore, we <code>automagically</code> got a title for the figure and a unit label for the colorbar. Let's try the <code>iris.plot</code> now for more control over the plot. Here we will plot the data on a cartopy axes.</p>
+<p>A nice feature of <code>iris.quickplot</code> is that it &quot;knows&quot; about the <code>cube's</code> metadata. Therefore, we <code>automagically</code> got a title for the figure and a unit label for the colorbar. Let's try the <code>iris.plot</code> for more control over the plot. Here we will plot the data on a cartopy axes.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -6435,10 +6437,10 @@ HzLravAtAJKdAAAAAElFTkSuQmCC
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We went from 2 to 14 lines of code.</p>
-<p>In conclusion, <code>iris.quickplot</code> is definately the way to go went exploring data. However, when you need more customization you will probably do better with <code>iris.plot</code> or even extracting the data yourself.</p>
+<p>In conclusion, <code>iris.quickplot</code> is definitely the way to go when you want a quick way to explorer the data. However, when you need more customization you will probably do better with <code>iris.plot</code>.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Take a look at the docs and the following talk (giving at Scipy 2013) to learn more about these two packages.</p>
+<p>Take a look at the docs, and the following talk (from Scipy 2013) to learn more about these two packages.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -6482,9 +6484,6 @@ In&nbsp;[7]:
 </div>
 
 </div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Check this post at <a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/python-iris.ipynb"><em>nbviewer</em>.</a></p>
-</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -6515,7 +6514,7 @@ href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">
 Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />
 Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
 rel="dct:source">http://ocefpaf.github.io/</a>.
-
+<p>Check this post at <a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/python-iris.ipynb"><em>nbviewer</em>.</a></p>
 </div>
 
 </div>
@@ -6526,73 +6525,72 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
 
 </div></p></div>
     <footer>
-      <p class="meta">
+<p class="meta">
   <span class="byline author vcard">
     Posted by <span class="fn">Filipe Fernandes</span>
   </span>
-  <time datetime="2013-09-16T10:04:00" pubdate>Sep 16, 2013</time>    <span class="categories">
-        <a class="category" href="http://ocefpaf.github.io/tag/data-visualization.html">data visualization</a>
-        <a class="category" href="http://ocefpaf.github.io/tag/data-analysis.html">data analysis</a>
-        <a class="category" href="http://ocefpaf.github.io/tag/teaching.html">teaching</a>
-      </span>
-  </p>      <div class="sharing">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ocefpaf.github.io/blog/2013/09/16/iris/" data-via="ocefpaf" data-counturl="http://ocefpaf.github.io/blog/2013/09/16/iris/" >Tweet</a>
-      <div class="g-plusone" data-size="medium"></div>
-    </div>    </footer>
+<time datetime="2013-09-16T10:04:00" pubdate>Sep 16, 2013</time>  <span class="categories">
+    <a class="category" href="http://ocefpaf.github.io/tag/data-visualization.html">data visualization</a>
+    <a class="category" href="http://ocefpaf.github.io/tag/data-analysis.html">data analysis</a>
+    <a class="category" href="http://ocefpaf.github.io/tag/teaching.html">teaching</a>
+  </span>
+</p><div class="sharing">
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ocefpaf.github.io/blog/2013/09/16/iris/" data-via="ocefpaf" data-counturl="http://ocefpaf.github.io/blog/2013/09/16/iris/" >Tweet</a>
+  <div class="g-plusone" data-size="medium"></div>
+</div>    </footer>
   </article>
 
-    <section>
+  <section>
     <h1>Comments</h1>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
   </section>
-  </div>
-      <aside class="sidebar">
+</div>
+<aside class="sidebar">
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
-            <li class="post">
+      <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2013/09/30/natural_earth/">Cartopy and the Natural Earth Dataset</a>
+      </li>
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/09/23/cartopy/">Cartopy as an alternative to basemap</a>
       </li>
-            <li class="post">
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/09/16/iris/">Using iris to read gridded files</a>
       </li>
-            <li class="post">
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/09/09/hdf/">Downloading several hdf files from a server</a>
       </li>
-            <li class="post">
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/09/02/woa09_horizontal/">Downloading and plotting World Ocean Atlas 2009 - Part 02</a>
       </li>
-            <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2013/08/26/woa09_vertical/">Downloading and plotting World Ocean Atlas 2009 - Part 01</a>
-      </li>
-          </ul>
+    </ul>
   </section>
-    <section>
+  <section>
       
     <h1>Categories</h1>
     <ul id="recent_posts">
-              <li><a href="http://ocefpaf.github.io/category/data-analysis.html">Data analysis</a></li>
-              <li><a href="http://ocefpaf.github.io/category/misc.html">Misc</a></li>
-              <li><a href="http://ocefpaf.github.io/category/plotting.html">Plotting</a></li>
-              <li><a href="http://ocefpaf.github.io/category/teaching.html">Teaching</a></li>
-              <li><a href="http://ocefpaf.github.io/category/plotting.html">plotting</a></li>
-          </ul>
+        <li><a href="http://ocefpaf.github.io/category/data-analysis.html">Data analysis</a></li>
+        <li><a href="http://ocefpaf.github.io/category/misc.html">Misc</a></li>
+        <li><a href="http://ocefpaf.github.io/category/plotting.html">Plotting</a></li>
+        <li><a href="http://ocefpaf.github.io/category/teaching.html">Teaching</a></li>
+    </ul>
   </section>
-   
+ 
 
   <section>
   <h1>Tags</h1>
-      <a href="http://ocefpaf.github.io/tag/map.html">map</a>,      <a href="http://ocefpaf.github.io/tag/data-analysis.html">data analysis</a>,      <a href="http://ocefpaf.github.io/tag/hydrography.html">hydrography</a>,      <a href="http://ocefpaf.github.io/tag/spikes.html">spikes</a>,      <a href="http://ocefpaf.github.io/tag/data-visualization.html">data visualization</a>,      <a href="http://ocefpaf.github.io/tag/georeference.html">georeference</a>,      <a href="http://ocefpaf.github.io/tag/python-ctd.html">python-ctd</a>,      <a href="http://ocefpaf.github.io/tag/inset.html">inset</a>,      <a href="http://ocefpaf.github.io/tag/plotting.html">plotting</a>,      <a href="http://ocefpaf.github.io/tag/ctd.html">CTD</a>,      <a href="http://ocefpaf.github.io/tag/seawater.html">seawater</a>,      <a href="http://ocefpaf.github.io/tag/downloading.html">downloading</a>,      <a href="http://ocefpaf.github.io/tag/ssh.html">SSH</a>,      <a href="http://ocefpaf.github.io/tag/aviso.html">AVISO</a>,      <a href="http://ocefpaf.github.io/tag/test.html">test</a>,      <a href="http://ocefpaf.github.io/tag/teaching.html">teaching</a>,      <a href="http://ocefpaf.github.io/tag/basemap.html">basemap</a>,      <a href="http://ocefpaf.github.io/tag/pandas.html">pandas</a>    </section>
+    <a href="http://ocefpaf.github.io/tag/map.html">map</a>,    <a href="http://ocefpaf.github.io/tag/downloading.html">downloading</a>,    <a href="http://ocefpaf.github.io/tag/hydrography.html">hydrography</a>,    <a href="http://ocefpaf.github.io/tag/georeference.html">georeference</a>,    <a href="http://ocefpaf.github.io/tag/python-ctd.html">python-ctd</a>,    <a href="http://ocefpaf.github.io/tag/inset.html">inset</a>,    <a href="http://ocefpaf.github.io/tag/plotting.html">plotting</a>,    <a href="http://ocefpaf.github.io/tag/ctd.html">CTD</a>,    <a href="http://ocefpaf.github.io/tag/data-visualization.html">data visualization</a>,    <a href="http://ocefpaf.github.io/tag/seawater.html">seawater</a>,    <a href="http://ocefpaf.github.io/tag/spikes.html">spikes</a>,    <a href="http://ocefpaf.github.io/tag/ssh.html">SSH</a>,    <a href="http://ocefpaf.github.io/tag/data-analysis.html">data analysis</a>,    <a href="http://ocefpaf.github.io/tag/aviso.html">AVISO</a>,    <a href="http://ocefpaf.github.io/tag/test.html">test</a>,    <a href="http://ocefpaf.github.io/tag/teaching.html">teaching</a>,    <a href="http://ocefpaf.github.io/tag/basemap.html">basemap</a>,    <a href="http://ocefpaf.github.io/tag/pandas.html">pandas</a>  </section>
 
-  
-                    
+
+
   <section>
     <h1>GitHub Repos</h1>
     <ul id="gh_repos">
       <li class="loading">Status updating...</li>
     </ul>
-          <a href="https://github.com/ocefpaf">@ocefpaf</a> on GitHub
-        <script type="text/javascript">
+      <a href="https://github.com/ocefpaf">@ocefpaf</a> on GitHub
+    <script type="text/javascript">
       $.domReady(function(){
           if (!window.jXHR){
               var jxhr = document.createElement('script');
@@ -6612,9 +6610,9 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
     </script>
     <script src="http://ocefpaf.github.io/theme/js/github.js" type="text/javascript"> </script>
   </section>
-  
-    <section>
-    <h1>Latest Tweets</h1>
+
+<section>
+  <h1>Latest Tweets</h1>
   <ul id="tweets">
     <li class="loading">Status updating...</li>
   </ul>
@@ -6624,11 +6622,11 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
     });
   </script>
   <script src="/theme/js/twitter.js" type="text/javascript"> </script>
-        <a href="http://twitter.com/ocefpaf" class="twitter-follow-button" data-show-count="true">Follow @ocefpaf</a>
-  </section>
-  <section class="googleplus">
+    <a href="http://twitter.com/ocefpaf" class="twitter-follow-button" data-show-count="true">Follow @ocefpaf</a>
+</section>
+<section class="googleplus">
   <h1>
-    <a href="https://plus.google.com/ocefpaf?rel=author">
+    <a href="https://plus.google.com/116220614704100857098?rel=author">
       <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
       Google+
     </a>
@@ -6640,7 +6638,7 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
   Copyright &copy; 2013 - Filipe Fernandes -
   <span class="credit">Powered by <a href="http://getpelican.com">Pelican</a></span>
 </p></footer>
-      <script type="text/javascript">
+    <script type="text/javascript">
 	    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 	    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
@@ -6651,10 +6649,10 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
 	    } catch(err) {}
 	</script>
 	<script type="text/javascript">
-	            var disqus_identifier = 'http://ocefpaf.github.io/blog/2013/09/16/iris/';
+          var disqus_identifier = 'http://ocefpaf.github.io/blog/2013/09/16/iris/';
           var disqus_url = 'http://ocefpaf.github.io/blog/2013/09/16/iris/';
 	  var disqus_title = 'Using iris to read gridded files';
-	  	  var disqus_shortname = 'python4oceanographers';
+	  var disqus_shortname = 'python4oceanographers';
 	  (function() {
 	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 	    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
