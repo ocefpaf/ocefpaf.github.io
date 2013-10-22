@@ -1346,7 +1346,7 @@ pre::-webkit-scrollbar-thumb:horizontal,.highlight::-webkit-scrollbar-thumb:hori
     border-radius:4px
 }
 .highlight code {
-    background: #9A9A9A
+    background:#000
 }
 figure.code {
     background:none;
