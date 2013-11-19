@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/lecture.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-11-18T17:30:00-02:00</updated><entry><title>OMPA lecture</title><link href="http://ocefpaf.github.io/blog/2013/11/18/ompa/" rel="alternate"></link><updated>2013-11-18T17:30:00-02:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-11-18:blog/2013/11/18/ompa/</id><summary type="html">&lt;p&gt;The following slides are an Introduction to Optimum Multi-Parametric Water
+Mass Analysis in Portuguese.&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;lt;iframe src=&amp;quot;http://ocefpaf.github.io/descriptive_oceanography/extra_OMP/index.html&amp;quot; width=800 height=600&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
+    Out[2]:&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_pyout"&gt;
+
+&lt;div class="output_html rendered_html"&gt;
+&lt;iframe src="http://ocefpaf.github.io/descriptive_oceanography/extra_OMP/index.html" width=800 height=600&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[3]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
+    Out[3]:&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_pyout"&gt;
+
+&lt;div class="output_html rendered_html"&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"&gt;&lt;img alt="Creative Commons License"
+style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type"&gt;
+"python4oceanographers"&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
+property="cc:attributionName" rel="cc:attributionURL"&gt;Filipe Fernandes&lt;/a&gt; is licensed under a &lt;a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"&gt;
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License&lt;/a&gt;.&lt;br /&gt;
+Based on a work at &lt;a xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
+rel="dct:source"&gt;http://ocefpaf.github.io/&lt;/a&gt;.
+&lt;p&gt;Check this post at &lt;a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/OMP.ipynb"&gt;&lt;em&gt;nbviewer&lt;/em&gt;.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;&lt;/p&gt;</summary><category term="lecture"></category></entry></feed>
