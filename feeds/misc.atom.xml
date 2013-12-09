@@ -104,7 +104,7 @@ In&amp;nbsp;[4]:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[5]:
+In&amp;nbsp;[2]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -118,20 +118,29 @@ In&amp;nbsp;[5]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-    Out[5]:&lt;/div&gt;
+    Out[2]:&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
 &lt;div class="output_html rendered_html"&gt;
-&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"&gt;&lt;img alt="Creative Commons License"
-style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type"&gt;
-"python4oceanographers"&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
-property="cc:attributionName" rel="cc:attributionURL"&gt;Filipe Fernandes&lt;/a&gt; is licensed under a &lt;a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"&gt;
-Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License&lt;/a&gt;.&lt;br /&gt;
-Based on a work at &lt;a xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
+
+&lt;small&gt;
+&lt;p&gt; This post was written as an IPython notebook. It is available for &lt;a href="http://ocef
+paf.github.com/downloads/notebooks/download_hdf.ipynb"&gt;download&lt;/a&gt; or as a static &lt;a href="http://
+nbviewer.ipython.org/url/ocefpaf.github.com/downloads/notebooks/download_hdf.ipynb"&gt;html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span
+xmlns:dct="http://purl.org/dc/terms/"
+property="dct:title"&gt;python4oceanographers&lt;/span&gt; by &lt;a
+xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
+property="cc:attributionName" rel="cc:attributionURL"&gt;Filipe Fernandes&lt;/a&gt; is
+licensed under a &lt;a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons
+Attribution-ShareAlike 4.0 International License&lt;/a&gt;.&lt;br /&gt;Based on a work at &lt;a
+xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
 rel="dct:source"&gt;http://ocefpaf.github.io/&lt;/a&gt;.
-&lt;p&gt;Check this post at &lt;a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/download_hdf.ipynb"&gt;&lt;em&gt;nbviewer&lt;/em&gt;.&lt;/a&gt;&lt;/p&gt;
+ 
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -814,11 +823,15 @@ In&amp;nbsp;[1]:
     
 &lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;styles&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Check this post at&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;uri&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_notebook_name&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &amp;lt;a href=&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;gt;&amp;lt;em&amp;gt;nbviewer&amp;lt;/em&amp;gt;.&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;uri&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt;
+&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;SymPy&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;lt;small&amp;gt;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;lt;p&amp;gt; This post was written as an IPython notebook. It is available for &amp;lt;a href=&amp;quot;http://ocef&lt;/span&gt;
+&lt;span class="s"&gt;paf.github.com/downloads/notebooks/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;.ipynb&amp;quot;&amp;gt;download&amp;lt;/a&amp;gt; or as a static &amp;lt;a href=&amp;quot;http://&lt;/span&gt;
+&lt;span class="s"&gt;nbviewer.ipython.org/url/ocefpaf.github.com/downloads/notebooks/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;.ipynb&amp;quot;&amp;gt;html&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class="s"&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -1593,7 +1606,7 @@ PCdBIIQQeU6CQAgh8pwEgRBC5DkJAiGEyHP/HyjFoapIsq5uAAAAAElFTkSuQmCC
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[14]:
+In&amp;nbsp;[2]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1607,20 +1620,29 @@ In&amp;nbsp;[14]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-    Out[14]:&lt;/div&gt;
+    Out[2]:&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
 &lt;div class="output_html rendered_html"&gt;
-&lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"&gt;&lt;img alt="Creative Commons License"
-style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;
-&lt;span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type"&gt;
-"python4oceanographers"&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
-property="cc:attributionName" rel="cc:attributionURL"&gt;Filipe Fernandes&lt;/a&gt; is licensed under a &lt;a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"&gt;
-Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License&lt;/a&gt;.&lt;br /&gt;
-Based on a work at &lt;a xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
+
+&lt;small&gt;
+&lt;p&gt; This post was written as an IPython notebook. It is available for &lt;a href="http://ocef
+paf.github.com/downloads/notebooks/SymPy.ipynb"&gt;download&lt;/a&gt; or as a static &lt;a href="http://
+nbviewer.ipython.org/url/ocefpaf.github.com/downloads/notebooks/SymPy.ipynb"&gt;html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span
+xmlns:dct="http://purl.org/dc/terms/"
+property="dct:title"&gt;python4oceanographers&lt;/span&gt; by &lt;a
+xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
+property="cc:attributionName" rel="cc:attributionURL"&gt;Filipe Fernandes&lt;/a&gt; is
+licensed under a &lt;a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons
+Attribution-ShareAlike 4.0 International License&lt;/a&gt;.&lt;br /&gt;Based on a work at &lt;a
+xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
 rel="dct:source"&gt;http://ocefpaf.github.io/&lt;/a&gt;.
-&lt;p&gt;Check this post at &lt;a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/SymPy.ipynb"&gt;&lt;em&gt;nbviewer&lt;/em&gt;.&lt;/a&gt;&lt;/p&gt;
+ 
 &lt;/div&gt;
 
 &lt;/div&gt;

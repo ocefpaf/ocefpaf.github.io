@@ -1283,11 +1283,15 @@ In&nbsp;[1]:
     
 <span class="n">HTML</span><span class="p">(</span><span class="n">styles</span><span class="p">)</span>
 
-<span class="n">text</span> <span class="o">=</span> <span class="s">&#39;Check this post at&#39;</span>
-<span class="n">uri</span> <span class="o">=</span> <span class="s">&#39;http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks&#39;</span>
-<span class="n">name</span> <span class="o">=</span> <span class="n">get_notebook_name</span><span class="p">()</span>
-<span class="n">link</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;&lt;p&gt;</span><span class="si">%s</span><span class="s"> &lt;a href=&quot;</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&quot;&gt;&lt;em&gt;nbviewer&lt;/em&gt;.&lt;/a&gt;&lt;/p&gt;&quot;&quot;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-<span class="n">html</span> <span class="o">+=</span> <span class="n">link</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s">&#39;SymPy&#39;</span>
+
+<span class="n">html</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">&lt;small&gt;</span>
+<span class="s">&lt;p&gt; This post was written as an IPython notebook. It is available for &lt;a href=&quot;http://ocef</span>
+<span class="s">paf.github.com/downloads/notebooks/</span><span class="si">%s</span><span class="s">.ipynb&quot;&gt;download&lt;/a&gt; or as a static &lt;a href=&quot;http://</span>
+<span class="s">nbviewer.ipython.org/url/ocefpaf.github.com/downloads/notebooks/</span><span class="si">%s</span><span class="s">.ipynb&quot;&gt;html&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="s">&lt;p&gt;&lt;/p&gt;</span>
+<span class="si">%s</span><span class="s"> &quot;&quot;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2062,7 +2066,7 @@ PCdBIIQQeU6CQAgh8pwEgRBC5DkJAiGEyHP/HyjFoapIsq5uAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[14]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">HTML</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
@@ -2076,20 +2080,29 @@ In&nbsp;[14]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[14]:</div>
+    Out[2]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 <div class="output_html rendered_html">
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><img alt="Creative Commons License"
-style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />
-<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">
-"python4oceanographers"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
-property="cc:attributionName" rel="cc:attributionURL">Filipe Fernandes</a> is licensed under a <a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">
-Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />
-Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
+
+<small>
+<p> This post was written as an IPython notebook. It is available for <a href="http://ocef
+paf.github.com/downloads/notebooks/SymPy.ipynb">download</a> or as a static <a href="http://
+nbviewer.ipython.org/url/ocefpaf.github.com/downloads/notebooks/SymPy.ipynb">html</a>.</p>
+<p></p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span
+xmlns:dct="http://purl.org/dc/terms/"
+property="dct:title">python4oceanographers</span> by <a
+xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
+property="cc:attributionName" rel="cc:attributionURL">Filipe Fernandes</a> is
+licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a
+xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
 rel="dct:source">http://ocefpaf.github.io/</a>.
-<p>Check this post at <a href="http://nbviewer.ipython.org/urls/raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/notebooks/SymPy.ipynb"><em>nbviewer</em>.</a></p>
+ 
 </div>
 
 </div>
@@ -2189,6 +2202,9 @@ $$- c^{3} + 0.5 c^{2} - \frac{0.5 c}{k} + \frac{3 c}{4 k^{2}} - \frac{c}{k^{2}} 
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2013/12/09/zoom/">Matplotlib zoomed axis</a>
+      </li>
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/12/02/chem/">Chemical Molecule Drawing with rdkit</a>
       </li>
       <li class="post">
@@ -2199,9 +2215,6 @@ $$- c^{3} + 0.5 c^{2} - \frac{0.5 c}{k} + \frac{3 c}{4 k^{2}} - \frac{c}{k^{2}} 
       </li>
       <li class="post">
           <a href="http://ocefpaf.github.io/blog/2013/11/11/animation/">Using JSAnimation with Sea Surface Height data</a>
-      </li>
-      <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2013/11/04/t_tide/">Using Matlab Toolboxes inside IPython</a>
       </li>
     </ul>
   </section>
@@ -2221,7 +2234,7 @@ $$- c^{3} + 0.5 c^{2} - \frac{0.5 c}{k} + \frac{3 c}{4 k^{2}} - \frac{c}{k^{2}} 
 
 <!--  <section>
   <h1>Tags</h1>
-    <a href="http://ocefpaf.github.io/tag/hydrography.html">hydrography</a>,    <a href="http://ocefpaf.github.io/tag/ephem.html">ephem</a>,    <a href="http://ocefpaf.github.io/tag/data-visualization.html">data visualization</a>,    <a href="http://ocefpaf.github.io/tag/data-analysis.html">data analysis</a>,    <a href="http://ocefpaf.github.io/tag/aviso.html">AVISO</a>,    <a href="http://ocefpaf.github.io/tag/visualization.html">visualization</a>,    <a href="http://ocefpaf.github.io/tag/georeference.html">georeference</a>,    <a href="http://ocefpaf.github.io/tag/python-ctd.html">python-ctd</a>,    <a href="http://ocefpaf.github.io/tag/data-visualization-ephem.html">data visualization ephem</a>,    <a href="http://ocefpaf.github.io/tag/animation.html">animation</a>,    <a href="http://ocefpaf.github.io/tag/test.html">test</a>,    <a href="http://ocefpaf.github.io/tag/lecture.html">lecture</a>,    <a href="http://ocefpaf.github.io/tag/plotting.html">plotting</a>,    <a href="http://ocefpaf.github.io/tag/map.html">map</a>,    <a href="http://ocefpaf.github.io/tag/downloading.html">downloading</a>,    <a href="http://ocefpaf.github.io/tag/seawater.html">seawater</a>,    <a href="http://ocefpaf.github.io/tag/ssh.html">SSH</a>,    <a href="http://ocefpaf.github.io/tag/teaching.html">teaching</a>,    <a href="http://ocefpaf.github.io/tag/lecture-animations-waves.html">lecture animations waves</a>,    <a href="http://ocefpaf.github.io/tag/spikes.html">spikes</a>,    <a href="http://ocefpaf.github.io/tag/plotting-lecture.html">plotting lecture</a>,    <a href="http://ocefpaf.github.io/tag/pandas.html">pandas</a>,    <a href="http://ocefpaf.github.io/tag/ctd.html">CTD</a>,    <a href="http://ocefpaf.github.io/tag/inset.html">inset</a>,    <a href="http://ocefpaf.github.io/tag/basemap.html">basemap</a>  </section>-->
+    <a href="http://ocefpaf.github.io/tag/hydrography.html">hydrography</a>,    <a href="http://ocefpaf.github.io/tag/ephem.html">ephem</a>,    <a href="http://ocefpaf.github.io/tag/data-visualization.html">data visualization</a>,    <a href="http://ocefpaf.github.io/tag/data-analysis.html">data analysis</a>,    <a href="http://ocefpaf.github.io/tag/aviso.html">AVISO</a>,    <a href="http://ocefpaf.github.io/tag/visualization.html">visualization</a>,    <a href="http://ocefpaf.github.io/tag/georeference.html">georeference</a>,    <a href="http://ocefpaf.github.io/tag/python-ctd.html">python-ctd</a>,    <a href="http://ocefpaf.github.io/tag/data-visualization-ephem.html">data visualization ephem</a>,    <a href="http://ocefpaf.github.io/tag/animation.html">animation</a>,    <a href="http://ocefpaf.github.io/tag/test.html">test</a>,    <a href="http://ocefpaf.github.io/tag/lecture.html">lecture</a>,    <a href="http://ocefpaf.github.io/tag/plotting.html">plotting</a>,    <a href="http://ocefpaf.github.io/tag/plotting-xbt.html">plotting xbt</a>,    <a href="http://ocefpaf.github.io/tag/map.html">map</a>,    <a href="http://ocefpaf.github.io/tag/downloading.html">downloading</a>,    <a href="http://ocefpaf.github.io/tag/seawater.html">seawater</a>,    <a href="http://ocefpaf.github.io/tag/ssh.html">SSH</a>,    <a href="http://ocefpaf.github.io/tag/teaching.html">teaching</a>,    <a href="http://ocefpaf.github.io/tag/lecture-animations-waves.html">lecture animations waves</a>,    <a href="http://ocefpaf.github.io/tag/spikes.html">spikes</a>,    <a href="http://ocefpaf.github.io/tag/plotting-lecture.html">plotting lecture</a>,    <a href="http://ocefpaf.github.io/tag/pandas.html">pandas</a>,    <a href="http://ocefpaf.github.io/tag/ctd.html">CTD</a>,    <a href="http://ocefpaf.github.io/tag/inset.html">inset</a>,    <a href="http://ocefpaf.github.io/tag/basemap.html">basemap</a>  </section>-->
 
 
 
