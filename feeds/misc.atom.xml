@@ -1,5 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-09-09T13:18:00-03:00</updated><entry><title>Downloading several hdf files from a server</title><link href="http://ocefpaf.github.io/blog/2013/09/09/hdf/" rel="alternate"></link><updated>2013-09-09T13:18:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-09-09:blog/2013/09/09/hdf/</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>python4oceanographers</title><link href="http://ocefpaf.github.io/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>http://ocefpaf.github.io/</id><updated>2013-12-23T12:34:00-02:00</updated><entry><title>Building this blog</title><link href="http://ocefpaf.github.io/blog/2013/12/23/blog/" rel="alternate"></link><updated>2013-12-23T12:34:00-02:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-12-23:blog/2013/12/23/blog/</id><summary type="html">&lt;p&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;People often ask me: How can I can build a blog similar to this one? What tools are you using? What is IPython notebook role in your blog?&lt;/p&gt;
+&lt;p&gt;If you are familiar with &lt;a href="http://docs.getpelican.com/en/3.3.0/"&gt;Pelican&lt;/a&gt; and want to jump ahead before reading the whole post, check out the blog code &lt;a href="https://github.com/ocefpaf/python4oceanographers"&gt;repository&lt;/a&gt; and have fun.&lt;/p&gt;
+&lt;p&gt;If you never used a static site generator like Pelican before keep reading.&lt;/p&gt;
+&lt;h3 id="blog-environment"&gt;Blog environment&lt;/h3&gt;
+&lt;p&gt;Your Blog will be around a while (hopefully), but most of the tools used to build it are evolving and changing very quickly. In order to avoid future headaches I use a distinguish work environment every time I create a new web-page/blog. &amp;quot;Freezing&amp;quot; the tools I use for that particular project.&lt;/p&gt;
+&lt;p&gt;To accomplish that I use &lt;a href="http://www.virtualenv.org/en/latest/"&gt;virtualenv&lt;/a&gt; to compartmentalize the environments, and &lt;a href="http://virtualenvwrapper.readthedocs.org/en/latest/"&gt;virtualenvwrapper&lt;/a&gt; to manage the virtualenvs.&lt;/p&gt;
+&lt;p&gt;You can install both using your distro package manager (or with any other python package installer out there: easy_install, pip, conda etc). In my OpenSUSE box I just use zypper,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo zypper in python-virtualenvwrapper&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and all the dependencies will be installed as well.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;virtualenvwrapper&lt;/code&gt; extends &lt;code&gt;virtualenv&lt;/code&gt; with the several commands, but I use just these three:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mkvirtualenv&lt;/code&gt; to create a new virtualenv;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;workon&lt;/code&gt; to enter the virtualenv;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deactivate&lt;/code&gt; to exit the virtualenv.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The command to create the &lt;strong&gt;blog&lt;/strong&gt; environment is&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkvirtualenv --distribute --no-site-packages blog&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and to enter the environment,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;workon blog&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;My environment is &amp;quot;frozen&amp;quot; following this &lt;a href="https://raw.github.com/ocefpaf/python4oceanographers/master/content/downloads/code/requirements.txt"&gt;requirements.txt&lt;/a&gt;, to get an environment identical to mine you need to download the file and install all the modules listed in there with pip:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that you do not need to be root to install inside the &lt;code&gt;virtualenv&lt;/code&gt;. However, you &lt;strong&gt;do&lt;/strong&gt; need to be inside the &lt;code&gt;virtualenv&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Check if everything installed correctly by typing &lt;code&gt;pip freeze&lt;/code&gt; and comparing with the original requirements.txt.&lt;/p&gt;
+&lt;p&gt;The blog environment is almost ready. There are only two other dependencies missing the &lt;a href="https://github.com/jakevdp/pelican-octopress-theme.git"&gt;theme&lt;/a&gt; and the &lt;a href="https://github.com/getpelican/pelican-plugins.git"&gt;plug-ins&lt;/a&gt;. Download them using &lt;code&gt;git&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/jakevdp/pelican-octopress-theme.git
+git clone https://github.com/getpelican/pelican-plugins.git&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are several other themes and plug-ins for pelican. I suggest you check them out. Just be aware that, if you are not using the octopress-theme, you must insert the &lt;code&gt;_nb_header.html&lt;/code&gt; manually inside your theme style. That is necessary to display the IPython notebooks properly. More information on how to do this in &lt;a href="http://jakevdp.github.io/blog/2013/05/07/migrating-from-octopress-to-pelican"&gt;Jake's blog&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="the-blog"&gt;The blog&lt;/h3&gt;
+&lt;p&gt;Now there are two options to proceed:&lt;/p&gt;
+&lt;ol style="list-style-type: decimal"&gt;
+&lt;li&gt;Clone my current blog and start from there;&lt;/li&gt;
+&lt;li&gt;Start a new one using &lt;a href="http://docs.getpelican.com/en/3.1.1/getting_started.html"&gt;pelican-quickstart&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you choose option 2 to start from scratch I recommend taking a look at both &lt;code&gt;publishconf.py&lt;/code&gt; and &lt;code&gt;pelicanconf.py&lt;/code&gt; from my repository. Here I will demonstrated the first option.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/ocefpaf/python4oceanographers&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now change into the &lt;code&gt;python4oceanographers&lt;/code&gt; directory, modify &lt;code&gt;pelicanconf.py&lt;/code&gt; &lt;code&gt;path&lt;/code&gt; variable to point to where you cloned &lt;code&gt;pelican-octopress-theme&lt;/code&gt; and &lt;code&gt;pelican-plugins&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;path = os.path.join(os.environ.get(&amp;#39;HOME&amp;#39;), &amp;#39;BLOG&amp;#39;)
+THEME = &amp;#39;%s/pelican-octopress-theme&amp;#39; % path
+PLUGIN_PATH = &amp;#39;%s/pelican-plugins&amp;#39; % path&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="compiling-the-blog"&gt;Compiling the blog&lt;/h3&gt;
+&lt;p&gt;You can use &lt;code&gt;make clean&lt;/code&gt; (or manually delete the output folder) to get a clean slate, and &lt;code&gt;make html&lt;/code&gt; to generate a new output folder.&lt;/p&gt;
+&lt;p&gt;If everything is OK enter the &lt;code&gt;output&lt;/code&gt; folder and type &lt;code&gt;python -m SimpleHTTPServer 8080&lt;/code&gt; to start serving the blog locally. Open your browser at &lt;a href="http://localhost:8080/"&gt;http://localhost:8080&lt;/a&gt; and check the results.&lt;/p&gt;
+&lt;p&gt;So far you should have a clone of my current blog.&lt;/p&gt;
+&lt;h3 id="the-blog-work-flow"&gt;The blog work flow&lt;/h3&gt;
+&lt;p&gt;Pelican posts are just Markdown files with a date and a subject like &lt;code&gt;2013-12-23-blogging.md&lt;/code&gt;. If you look inside my files you will notice that I just write a minimal header like,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title: Building this blog
+date:  2013-12-23 12:34
+comments: true
+slug: blog
+
+{% notebook blogging.ipynb cells[1:] %}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and the actual post is an IPython notebook &lt;a href="http://nbviewer.ipython.org/url/ocefpaf.github.com/downloads/notebooks/bloggin.ipynb"&gt;file&lt;/a&gt; converted from JSON to HTML using the &lt;a href="https://github.com/jakevdp/pelican-plugins/blob/liquid_tags/liquid_tags/notebook.py"&gt;liquid tags plug-in&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is time to create your own posts. Just delete all the Markdown and ipynb files inside the content folder, create a new Markdown and corresponding ipynb file for your new post. Keep using &lt;code&gt;make html&lt;/code&gt;+&lt;code&gt;python -m SimpleHTTPServer 8080&lt;/code&gt; to visualize the final format in your browser.&lt;/p&gt;
+&lt;p&gt;Once you are satisfied with the results use &lt;code&gt;make deploy&lt;/code&gt; to publish at github. (Remember that you must edit the &lt;code&gt;Makefile&lt;/code&gt; first to point to your github.io page.)&lt;/p&gt;
+&lt;p&gt;If you are interested in alternatives to blog with IPython notebooks check:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.damian.oquanta.info/"&gt;http://www.damian.oquanta.info/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html"&gt;http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://danielfrg.github.io/blog/2013/03/08/pelican-ipython-notebook-plugin/"&gt;http://danielfrg.github.io/blog/2013/03/08/pelican-ipython-notebook-plugin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now go ahead and start your own blog! Create a &lt;a href="http://pages.github.com/"&gt;github repository for your page&lt;/a&gt;, adapt the configuration to your needs and Good Luck!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
+    Out[2]:&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_pyout"&gt;
+
+&lt;div class="output_html rendered_html"&gt;
+
+&lt;small&gt;
+&lt;p&gt; This post was written as an IPython notebook. It is available for &lt;a href="http://ocef
+paf.github.com/downloads/notebooks/blogging.ipynb"&gt;download&lt;/a&gt; or as a static &lt;a href="http://
+nbviewer.ipython.org/url/ocefpaf.github.com/downloads/notebooks/blogging.ipynb"&gt;html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;&lt;img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span
+xmlns:dct="http://purl.org/dc/terms/"
+property="dct:title"&gt;python4oceanographers&lt;/span&gt; by &lt;a
+xmlns:cc="http://creativecommons.org/ns#" href="http://ocefpaf.github.io/"
+property="cc:attributionName" rel="cc:attributionURL"&gt;Filipe Fernandes&lt;/a&gt; is
+licensed under a &lt;a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/"&gt;Creative Commons
+Attribution-ShareAlike 4.0 International License&lt;/a&gt;.&lt;br /&gt;Based on a work at &lt;a
+xmlns:dct="http://purl.org/dc/terms/" href="http://ocefpaf.github.io/"
+rel="dct:source"&gt;http://ocefpaf.github.io/&lt;/a&gt;.
+ 
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Downloading several hdf files from a server</title><link href="http://ocefpaf.github.io/blog/2013/09/09/hdf/" rel="alternate"></link><updated>2013-09-09T13:18:00-03:00</updated><author><name>Filipe Fernandes</name></author><id>tag:ocefpaf.github.io,2013-09-09:blog/2013/09/09/hdf/</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Manually downloading several &lt;code&gt;hdf&lt;/code&gt; files is, most of the time, impractical. Some time ago I helped a friend with a similar problem with a simple python script. This post is just a review of that script so others can modify/re-use it for similar cases.&lt;/p&gt;
 &lt;/div&gt;
