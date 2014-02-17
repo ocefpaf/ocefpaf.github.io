@@ -1843,7 +1843,9 @@ In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="k">def</span> <span class="nf">numcorio</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">u0</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="n">dtsol</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Computing inertial oscillation.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Function which discretises the inertial oscillation.</span>
+<span class="sd">    If other equations need to be discretised, this can be done</span>
+<span class="sd">    by adapting numcorio.py (see Numerical Exercises 2.7 and 2.8).&quot;&quot;&quot;</span>
     <span class="c"># Initial condition.</span>
     <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
     <span class="n">u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u0</span><span class="p">)</span>
@@ -1894,6 +1896,9 @@ In&nbsp;[5]:
 </div>
 </div>
 
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Changing the time step <span class="math">\((f\Delta t=0.005)\)</span> allows to see convergence even in the case where the velocity norm increases. The program calls function numcorio.py. (Used to prepare Figures 2.11.)</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -3201,6 +3206,9 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2014/02/17/chap2_coriolis_part2/">Second part of the Coriolis example</a>
+      </li>
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/02/10/chap2_coriolis/">Coriolis example from Cushman-Roisin & Beckers book</a>
       </li>
       <li class="post">
@@ -3211,9 +3219,6 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
       </li>
       <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/01/20/cc_figures/">Making my slides figures a little more open...</a>
-      </li>
-      <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2014/01/13/mpld3/">Interactive plots with mpld3</a>
       </li>
     </ul>
   </section>
