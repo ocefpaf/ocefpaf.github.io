@@ -1688,6 +1688,17 @@ pre.ipynb {
   font-size: 13px;
 }
 
+/* remove the prompt div from text cells */
+div.text_cell .prompt {
+    display: none;
+}
+
+/* remove horizontal padding from text cells, */
+/* so it aligns with outer body text */
+div.text_cell_render {
+    padding: 0.5em 0em;
+}
+
 img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
 </style>
 
@@ -1750,12 +1761,32 @@ init_mathjax();
 <ul class="main-navigation">
   <li><a href="http://ocefpaf.github.io/">Blog</a></li>
     <li><a href="/archives.html">Archives</a></li>
-    <li><a href="http://ocefpaf.tiddlyspot.com/">Home Page</a></li>
+    <li><a href="http://bit.ly/ocefpafCV">Home Page</a></li>
     <!-- TODO: add categories here? -->
 </ul></nav>
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="http://ocefpaf.github.io/blog/2013/12/30/mdt/">Mean Dynamic Topography</a>
+      </h1>
+      <p class="meta"><time datetime="2013-12-30T02:40:00" pubdate>Dec 30, 2013</time></p>
+</header>
+
+  <div class="entry-content"><p>(Updating my laboratory lecture on Geostrophic Currents.  This post was
+written in Portuguese.)</p>
+<p>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="notebook-para-calcular-a-corrente-geostrófica-entre-dois-pontos-usando-o-os-dados-de-mean-dynamic-height-do-arquivo-mdt_cnes_cls2009_global_v1.1.nc.">Notebook para calcular a corrente geostrófica entre dois pontos usando o os dados de <em>Mean Dynamic Height</em> do arquivo <code>mdt_cnes_cls2009_global_v1.1.nc</code>.</h3>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Esse notebook visa explorar dados de Altura Dinâmica Média calculando a corrente geostrófica gerado pela ...</p></div></p></div>
+  <footer>
+    <a rel="full-article" href="http://ocefpaf.github.io/blog/2013/12/30/mdt/">Read On &crarr;</a>
+  </footer>
+  		</article>
   		<article>
 <header>
       <h1 class="entry-title">
@@ -1963,24 +1994,6 @@ In&nbsp;[2]:
     <a rel="full-article" href="http://ocefpaf.github.io/blog/2013/10/28/comet-ison/">Read On &crarr;</a>
   </footer>
   		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://ocefpaf.github.io/blog/2013/10/21/ephem/">Playing with pyephem</a>
-      </h1>
-      <p class="meta"><time datetime="2013-10-21T06:47:00" pubdate>Oct 21, 2013</time></p>
-</header>
-
-  <div class="entry-content"><p>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>I'm teaching tides in a <a href="https://github.com/ocefpaf/waves_and_tides">Waves and Tides course</a> and, every now and then, I find myself creating new figures to show the students. This post is to show how I created a &quot;moon phase path&quot; using <a href="http://rhodesmill.org/pyephem/">pyephem</a>. The final plot was based on <a href="http://michelanders.blogspot.com.br/2011/01/moon-phases-with-pyephem.html">this example</a>.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Just for fun ...</p></div></p></div>
-  <footer>
-    <a rel="full-article" href="http://ocefpaf.github.io/blog/2013/10/21/ephem/">Read On &crarr;</a>
-  </footer>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://ocefpaf.github.io/category/misc3.html">&larr; Older</a>
 
@@ -1999,6 +2012,9 @@ In&nbsp;[2]:
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2014/03/10/gearth/">Using Matplotlib and simplekml to create Google Overlays</a>
+      </li>
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/03/03/ies80/">Cushman-Roisin & Beckers chapter 3: International Equation of State</a>
       </li>
       <li class="post">
@@ -2009,9 +2025,6 @@ In&nbsp;[2]:
       </li>
       <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/02/10/chap2_coriolis/">Coriolis example from Cushman-Roisin & Beckers book</a>
-      </li>
-      <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2014/02/03/aliasing/">Teaching a new class this semester</a>
       </li>
     </ul>
   </section>
@@ -2030,39 +2043,12 @@ In&nbsp;[2]:
   </section>-->
 
 
-
-  <section>
-    <h1>GitHub Repos</h1>
-    <ul id="gh_repos">
-      <li class="loading">Status updating...</li>
-    </ul>
-      <a href="https://github.com/ocefpaf">@ocefpaf</a> on GitHub
-    <script type="text/javascript">
-      $.domReady(function(){
-          if (!window.jXHR){
-              var jxhr = document.createElement('script');
-              jxhr.type = 'text/javascript';
-              jxhr.src = 'http://ocefpaf.github.io/theme/js/jXHR.js';
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(jxhr, s);
-          }
-
-          github.showRepos({
-              user: 'ocefpaf',
-              count: 5,
-              skip_forks: true,
-              target: '#gh_repos'
-          });
-      });
-    </script>
-    <script src="http://ocefpaf.github.io/theme/js/github.js" type="text/javascript"> </script>
-  </section>
-
     <section>
         <h1>Links</h2>
         <ul>
             <li><a href="http://pyaos.johnny-lin.com/" target="_blank">PyAOS</a></li>
             <li><a href="http://earthpy.org/" target="_blank">EarthPy</a></li>
+            <li><a href="http://rsignell-usgs.github.io/blog/" target="_blank">Rich Signell's Notebook Blog</a></li>
             <li><a href="http://drclimate.wordpress.com/" target="_blank">drclimate</a></li>
             <li><a href="http://software-carpentry.org/blog/index.html" target="_blank">Software Carpentry</a></li>
         </ul>

@@ -1688,6 +1688,17 @@ pre.ipynb {
   font-size: 13px;
 }
 
+/* remove the prompt div from text cells */
+div.text_cell .prompt {
+    display: none;
+}
+
+/* remove horizontal padding from text cells, */
+/* so it aligns with outer body text */
+div.text_cell_render {
+    padding: 0.5em 0em;
+}
+
 img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
 </style>
 
@@ -1750,7 +1761,7 @@ init_mathjax();
 <ul class="main-navigation">
   <li><a href="http://ocefpaf.github.io/">Blog</a></li>
     <li><a href="/archives.html">Archives</a></li>
-    <li><a href="http://ocefpaf.tiddlyspot.com/">Home Page</a></li>
+    <li><a href="http://bit.ly/ocefpafCV">Home Page</a></li>
     <!-- TODO: add categories here? -->
 </ul></nav>
   <div id="main">
@@ -5190,6 +5201,9 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2014/03/10/gearth/">Using Matplotlib and simplekml to create Google Overlays</a>
+      </li>
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/03/03/ies80/">Cushman-Roisin & Beckers chapter 3: International Equation of State</a>
       </li>
       <li class="post">
@@ -5200,9 +5214,6 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
       </li>
       <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/02/10/chap2_coriolis/">Coriolis example from Cushman-Roisin & Beckers book</a>
-      </li>
-      <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2014/02/03/aliasing/">Teaching a new class this semester</a>
       </li>
     </ul>
   </section>
@@ -5221,39 +5232,12 @@ rel="dct:source">http://ocefpaf.github.io/</a>.
   </section>-->
 
 
-
-  <section>
-    <h1>GitHub Repos</h1>
-    <ul id="gh_repos">
-      <li class="loading">Status updating...</li>
-    </ul>
-      <a href="https://github.com/ocefpaf">@ocefpaf</a> on GitHub
-    <script type="text/javascript">
-      $.domReady(function(){
-          if (!window.jXHR){
-              var jxhr = document.createElement('script');
-              jxhr.type = 'text/javascript';
-              jxhr.src = 'http://ocefpaf.github.io/theme/js/jXHR.js';
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(jxhr, s);
-          }
-
-          github.showRepos({
-              user: 'ocefpaf',
-              count: 5,
-              skip_forks: true,
-              target: '#gh_repos'
-          });
-      });
-    </script>
-    <script src="http://ocefpaf.github.io/theme/js/github.js" type="text/javascript"> </script>
-  </section>
-
     <section>
         <h1>Links</h2>
         <ul>
             <li><a href="http://pyaos.johnny-lin.com/" target="_blank">PyAOS</a></li>
             <li><a href="http://earthpy.org/" target="_blank">EarthPy</a></li>
+            <li><a href="http://rsignell-usgs.github.io/blog/" target="_blank">Rich Signell's Notebook Blog</a></li>
             <li><a href="http://drclimate.wordpress.com/" target="_blank">drclimate</a></li>
             <li><a href="http://software-carpentry.org/blog/index.html" target="_blank">Software Carpentry</a></li>
         </ul>

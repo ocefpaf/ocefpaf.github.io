@@ -1688,6 +1688,17 @@ pre.ipynb {
   font-size: 13px;
 }
 
+/* remove the prompt div from text cells */
+div.text_cell .prompt {
+    display: none;
+}
+
+/* remove horizontal padding from text cells, */
+/* so it aligns with outer body text */
+div.text_cell_render {
+    padding: 0.5em 0em;
+}
+
 img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
 </style>
 
@@ -1750,12 +1761,28 @@ init_mathjax();
 <ul class="main-navigation">
   <li><a href="http://ocefpaf.github.io/">Blog</a></li>
     <li><a href="/archives.html">Archives</a></li>
-    <li><a href="http://ocefpaf.tiddlyspot.com/">Home Page</a></li>
+    <li><a href="http://bit.ly/ocefpafCV">Home Page</a></li>
     <!-- TODO: add categories here? -->
 </ul></nav>
   <div id="main">
     <div id="content">
 <div class="blog-index">
+  		<article>
+<header>
+      <h1 class="entry-title">
+        <a href="http://ocefpaf.github.io/blog/2013/08/12/brazil-states-map/">Creating a correct map of Brazilian states with basemap</a>
+      </h1>
+      <p class="meta"><time datetime="2013-08-12T12:45:00" pubdate>Aug 12, 2013</time></p>
+</header>
+
+  <div class="entry-content"><p>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The political boundaries data shipped with basemap is OK for North America and Europe, but it is outdated by several <a href="http://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Mato_Grosso#Divis.C3.A3o_do_estado">years</a> for South America. In order to draw a more accurate map we need to use custom data from more up-to-date sources.</p>
+<p>One source of data are the <code>shapefiles</code> from ...</p></div></p></div>
+  <footer>
+    <a rel="full-article" href="http://ocefpaf.github.io/blog/2013/08/12/brazil-states-map/">Read On &crarr;</a>
+  </footer>
+  		</article>
   		<article>
 <header>
       <h1 class="entry-title">
@@ -1976,24 +2003,6 @@ assumptions made for the grid interpolation.</p>
     <a rel="full-article" href="http://ocefpaf.github.io/blog/2013/06/10/ctd_spikes_2/">Read On &crarr;</a>
   </footer>
   		</article>
-  		<article>
-<header>
-      <h1 class="entry-title">
-        <a href="http://ocefpaf.github.io/blog/2013/06/03/ctd_spikes_1/">Removing spikes from CTD data — Part 1</a>
-      </h1>
-      <p class="meta"><time datetime="2013-06-03T04:03:00" pubdate>Jun 03, 2013</time></p>
-</header>
-
-  <div class="entry-content"><p>There are two different types of spikes that may happen in CTD data:</p>
-<ol>
-<li>Bad data from electrical failures.  Usually it manifest in all the measured
-    variables (Temperature, Conductivity, Oxygen, etc);</li>
-<li>Salinity spikes due to a wrong temperature value used when computing it
-    from conductivity.  This can happen due to a ...</li></ol></div>
-  <footer>
-    <a rel="full-article" href="http://ocefpaf.github.io/blog/2013/06/03/ctd_spikes_1/">Read On &crarr;</a>
-  </footer>
-  		</article>
 <div class="pagination">
     <a class="prev" href="http://ocefpaf.github.io/category/misc5.html">&larr; Older</a>
 
@@ -2012,6 +2021,9 @@ assumptions made for the grid interpolation.</p>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post">
+          <a href="http://ocefpaf.github.io/blog/2014/03/10/gearth/">Using Matplotlib and simplekml to create Google Overlays</a>
+      </li>
+      <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/03/03/ies80/">Cushman-Roisin & Beckers chapter 3: International Equation of State</a>
       </li>
       <li class="post">
@@ -2022,9 +2034,6 @@ assumptions made for the grid interpolation.</p>
       </li>
       <li class="post">
           <a href="http://ocefpaf.github.io/blog/2014/02/10/chap2_coriolis/">Coriolis example from Cushman-Roisin & Beckers book</a>
-      </li>
-      <li class="post">
-          <a href="http://ocefpaf.github.io/blog/2014/02/03/aliasing/">Teaching a new class this semester</a>
       </li>
     </ul>
   </section>
@@ -2043,39 +2052,12 @@ assumptions made for the grid interpolation.</p>
   </section>-->
 
 
-
-  <section>
-    <h1>GitHub Repos</h1>
-    <ul id="gh_repos">
-      <li class="loading">Status updating...</li>
-    </ul>
-      <a href="https://github.com/ocefpaf">@ocefpaf</a> on GitHub
-    <script type="text/javascript">
-      $.domReady(function(){
-          if (!window.jXHR){
-              var jxhr = document.createElement('script');
-              jxhr.type = 'text/javascript';
-              jxhr.src = 'http://ocefpaf.github.io/theme/js/jXHR.js';
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(jxhr, s);
-          }
-
-          github.showRepos({
-              user: 'ocefpaf',
-              count: 5,
-              skip_forks: true,
-              target: '#gh_repos'
-          });
-      });
-    </script>
-    <script src="http://ocefpaf.github.io/theme/js/github.js" type="text/javascript"> </script>
-  </section>
-
     <section>
         <h1>Links</h2>
         <ul>
             <li><a href="http://pyaos.johnny-lin.com/" target="_blank">PyAOS</a></li>
             <li><a href="http://earthpy.org/" target="_blank">EarthPy</a></li>
+            <li><a href="http://rsignell-usgs.github.io/blog/" target="_blank">Rich Signell's Notebook Blog</a></li>
             <li><a href="http://drclimate.wordpress.com/" target="_blank">drclimate</a></li>
             <li><a href="http://software-carpentry.org/blog/index.html" target="_blank">Software Carpentry</a></li>
         </ul>
