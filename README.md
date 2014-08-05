@@ -1,7 +1,4 @@
-github pages for ocefpaf
-------------------------
-
-http://ocefpaf.github.io/
+#[github pages for ocefpaf](http://ocefpaf.github.io/)
 
 ***
 
