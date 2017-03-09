@@ -6,7 +6,6 @@ Welcome to ocefpaf GitHub Pages:
 
 ### Blogs
 - [python4oceanographers](http://ocefpaf.github.io/python4oceanographers)
-- [BelaSalvador](http://ocefpaf.github.io/BelaSalvador)
 
 ### Personal pages
 - [homepage](http://ocefpaf.github.io/homepage)
